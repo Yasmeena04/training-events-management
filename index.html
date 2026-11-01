@@ -18,6 +18,7 @@
 
     <!-- Our shared CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/Home.css">
 </head>
 
 <body>
@@ -59,24 +60,255 @@
 
 
     <!-- Main Content -->
-    <main class="container py-4">
 
-        <section class="page-head">
+<main>
 
-            <p class="eyebrow">Training Event Management</p>
+    <!-- HERO SECTION -->
+    <section class="home-hero">
 
-            <h1>Discover Training Opportunities</h1>
+        <div class="hero-inner">
 
-            <p class="muted">
-                Explore training events, develop new skills,
-                and connect with professional trainers.
-            </p>
+            <!-- Left side -->
+            <div class="hero-content">
 
-        </section>
+                <p class="eyebrow hero-eyebrow">
+                    TRAINING PLATFORM
+                </p>
 
-        <!-- We will build the homepage sections here -->
+                <h1>
+                    Discover training opportunities.
+                </h1>
 
-    </main>
+                <p class="hero-description">
+                    Explore events, develop skills and connect
+                    with professional trainers.
+                </p>
+
+                <a href="participant/trainings.html"
+                   class="btn btn-primary hero-button">
+                    Explore Trainings →
+                </a>
+
+            </div>
+
+
+            <!-- Right side -->
+            <div class="hero-visual">
+
+                <div class="hero-visual-heading">
+                    <p class="hero-kicker">EXPLORE YOUR POTENTIAL</p>
+                    <h2>Skills for your next step</h2>
+                </div>
+
+                <div class="hero-orbit"></div>
+
+                <article class="skill-card skill-card-one">
+                    <span>01</span>
+                    <div>
+                        <h3>Technology</h3>
+                        <p>Digital and technical skills</p>
+                    </div>
+                </article>
+
+                <article class="skill-card skill-card-two">
+                    <span>02</span>
+                    <div>
+                        <h3>Professional skills</h3>
+                        <p>Leadership and communication</p>
+                    </div>
+                </article>
+
+                <article class="skill-card skill-card-three">
+                    <span>03</span>
+                    <div>
+                        <h3>Creative workshops</h3>
+                        <p>Explore new ideas and abilities</p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- UPCOMING TRAININGS -->
+    <section class="upcoming-trainings container">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="eyebrow">DISCOVER OPPORTUNITIES</p>
+                <h2>Upcoming Trainings</h2>
+                <p class="muted">
+                    Find the right training to develop your skills.
+                </p>
+            </div>
+
+            <a href="participant/trainings.html" class="show-more">
+                View all trainings →
+            </a>
+
+        </div>
+
+
+        <div class="training-grid">
+
+            <!-- Training 1 -->
+            <article class="training-card">
+
+                <img src="assets/img/data-analytics.jpg"
+                     alt="Data Analytics Bootcamp"
+                     class="training-image">
+
+                <div class="training-card-body">
+
+                    <span class="tag">Technology</span>
+
+                    <h3>Introduction to Data Analytics</h3>
+
+                    <p class="training-description">
+                        Learn the fundamentals of data analysis
+                        and start building data-driven solutions.
+                    </p>
+
+                    <div class="training-info">
+
+                        <p>
+                            <span>◷</span>
+                            <time datetime="2026-11-12">12 November 2026</time>
+                        </p>
+
+                        <p class="seats-left">
+                            12 seats left
+                        </p>
+
+                    </div>
+
+                    <div class="training-actions">
+
+                        <a href="participant/training-details.html"
+                           class="details-link">
+                            Details
+                        </a>
+
+                        <a href="participant/apply.html"
+                           class="btn btn-primary">
+                            Apply now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Training 2 -->
+            <article class="training-card">
+
+                <img src="assets/img/ui-ux.jpg"
+                     alt="UI and UX design workshop"
+                     class="training-image">
+
+                <div class="training-card-body">
+
+                    <span class="tag">Creative</span>
+
+                    <h3>UI/UX Design Workshop</h3>
+
+                    <p class="training-description">
+                        Discover user experience principles
+                        and interface design.
+                    </p>
+
+                    <div class="training-info">
+
+                        <p>
+                            <span>◷</span>
+                            <time datetime="2026-11-18">18 November 2026</time>
+                        </p>
+
+                        <p class="seats-left">
+                            8 seats left
+                        </p>
+
+                    </div>
+
+                    <div class="training-actions">
+
+                        <a href="participant/training-details.html"
+                           class="details-link">
+                            Details
+                        </a>
+
+                        <a href="participant/apply.html"
+                           class="btn btn-primary">
+                            Apply now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Training 3 -->
+            <article class="training-card">
+
+                <img src="assets/img/project-management.jpg"
+                     alt="Team collaborating on project management"
+                     class="training-image">
+
+                <div class="training-card-body">
+
+                    <span class="tag">Professional</span>
+
+                    <h3>Project Management</h3>
+
+                    <p class="training-description">
+                        Learn how to organize projects
+                        and manage teams effectively.
+                    </p>
+
+                    <div class="training-info">
+
+                        <p>
+                            <span>◷</span>
+                            <time datetime="2026-11-26">26 November 2026</time>
+                        </p>
+
+                        <p class="seats-left">
+                            5 seats left
+                        </p>
+
+                    </div>
+
+                    <div class="training-actions">
+
+                        <a href="participant/training-details.html"
+                           class="details-link">
+                            Details
+                        </a>
+
+                        <a href="participant/apply.html"
+                           class="btn btn-primary">
+                            Apply now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
 
 
     <!-- Footer -->
