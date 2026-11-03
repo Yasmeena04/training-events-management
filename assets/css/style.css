@@ -1901,3 +1901,647 @@ body.profile-page {
     }
 
 }
+
+
+/* ==========================================
+   LEVENT - ALERTS PAGE
+========================================== */
+
+body.alerts-page {
+    display: block;
+    min-height: 100vh;
+    background: var(--lav);
+    color: var(--ink);
+}
+
+
+/* ==========================================
+   APPLICATION LAYOUT
+========================================== */
+
+.alerts-layout {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.alerts-layout .sidebar {
+    background: var(--night);
+    color: #ffffff;
+
+    padding: 1.8rem 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+.sidebar-brand {
+    display: block;
+    margin-bottom: 3rem;
+    text-decoration: none;
+}
+
+.sidebar-brand img {
+    display: block;
+    width: 175px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.sidebar-label {
+    color: #A99CD9;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+
+    margin-bottom: 1rem;
+    padding-left: 0.8rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    padding: 0.85rem 1rem;
+
+    border-radius: 10px;
+
+    color: #C9BFEE;
+    font-weight: 600;
+    font-size: 0.9rem;
+
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.sidebar-link.active {
+    background: var(--brand);
+    color: #ffffff;
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.logout-link {
+    color: #E9A1A1;
+}
+
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.alerts-main {
+    min-width: 0;
+    padding: 2.3rem 3rem;
+}
+
+
+/* ==========================================
+   TOP BAR
+========================================== */
+
+.alerts-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+}
+
+.alerts-breadcrumb {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+
+.alerts-topbar h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.alerts-subtitle {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0;
+}
+
+.topbar-user {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.topbar-avatar {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: var(--tint);
+    color: var(--brand-dark);
+}
+
+
+/* ==========================================
+   NOTIFICATION SUMMARY
+========================================== */
+
+.alerts-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1.3rem;
+
+    background: #ffffff;
+
+    border: 1px solid var(--line);
+    border-radius: var(--r-card);
+}
+
+.summary-icon {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: var(--tint);
+    color: var(--brand);
+
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.unread-summary .summary-icon {
+    background: var(--ok-bg);
+    color: var(--ok);
+}
+
+.summary-card p {
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.summary-card h2 {
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+
+/* ==========================================
+   ALERTS CONTENT
+========================================== */
+
+.alerts-content {
+    background: #ffffff;
+
+    border: 1px solid var(--line);
+    border-radius: var(--r-card);
+
+    padding: 1.8rem;
+}
+
+.alerts-heading {
+    margin-bottom: 1.5rem;
+}
+
+.alerts-heading h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+}
+
+.alerts-heading p {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+
+/* ==========================================
+   FILTER CONTROLS
+========================================== */
+
+.alert-filter-input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+    border: 0;
+}
+
+.alert-filter-input:focus-visible + .alerts-toolbar {
+    outline: 2px solid var(--brand);
+}
+
+.alerts-toolbar {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid var(--line);
+
+    margin-bottom: 0.5rem;
+}
+
+.alert-filters {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.alert-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.8rem 0.2rem;
+
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    border-bottom: 3px solid transparent;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.alert-filter span {
+    display: inline-grid;
+    place-items: center;
+
+    min-width: 23px;
+    height: 23px;
+
+    padding: 0 5px;
+
+    background: var(--lav);
+    color: var(--muted);
+
+    border-radius: 999px;
+    font-size: 0.72rem;
+}
+
+
+/* Active filter */
+
+#alerts-all:checked ~ .alerts-toolbar
+label[for="alerts-all"],
+
+#alerts-unread:checked ~ .alerts-toolbar
+label[for="alerts-unread"],
+
+#alerts-read:checked ~ .alerts-toolbar
+label[for="alerts-read"] {
+
+    color: var(--brand-dark);
+    border-bottom-color: var(--brand);
+}
+
+
+/* ==========================================
+   FILTER FUNCTIONALITY
+========================================== */
+
+/* Show unread notifications only */
+
+#alerts-unread:checked ~ .alerts-list
+.alert-card:not([data-status="unread"]) {
+    display: none;
+}
+
+
+/* Show read notifications only */
+
+#alerts-read:checked ~ .alerts-list
+.alert-card:not([data-status="read"]) {
+    display: none;
+}
+
+
+/* ==========================================
+   NOTIFICATION CARDS
+========================================== */
+
+.alerts-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.alert-card {
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr) auto;
+
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1.3rem 0;
+
+    border-bottom: 1px solid var(--line);
+
+    transition: background 0.2s ease;
+}
+
+.alert-card:last-child {
+    border-bottom: none;
+}
+
+.alert-card:hover {
+    background: #FAF8FF;
+}
+
+
+/* Unread notification indicator */
+
+.alert-card[data-status="unread"] {
+    background: #FCFAFF;
+}
+
+.alert-card[data-status="unread"]:hover {
+    background: #F5F0FF;
+}
+
+
+/* Notification icons */
+
+.alert-icon {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.application-icon {
+    background: var(--ok-bg);
+    color: var(--ok);
+}
+
+.schedule-icon {
+    background: var(--tint);
+    color: var(--brand);
+}
+
+.announcement-icon {
+    background: var(--warn-bg);
+    color: var(--warn);
+}
+
+.account-icon {
+    background: #E5F1FF;
+    color: #2863A5;
+}
+
+
+/* Notification details */
+
+.alert-details {
+    min-width: 0;
+}
+
+.alert-title-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+
+    margin-bottom: 0.4rem;
+}
+
+.alert-title-row h3 {
+    font-size: 0.98rem;
+    margin: 0;
+}
+
+.alert-details > p {
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.6;
+
+    margin-bottom: 0.65rem;
+}
+
+.alert-details strong {
+    color: var(--ink);
+}
+
+
+/* Read / unread badges */
+
+.unread-badge,
+.read-badge {
+    display: inline-block;
+
+    padding: 0.2rem 0.6rem;
+
+    border-radius: 999px;
+
+    font-size: 0.68rem;
+    font-weight: 800;
+}
+
+.unread-badge {
+    background: var(--ok-bg);
+    color: var(--ok);
+}
+
+.read-badge {
+    background: var(--lav);
+    color: var(--muted);
+}
+
+
+/* Notification metadata */
+
+.alert-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+
+/* Notification action */
+
+.alert-action {
+    color: var(--brand-dark);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.alert-action:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .alerts-main {
+        padding: 2rem 1.5rem;
+    }
+
+    .alerts-summary {
+        gap: 0.7rem;
+    }
+
+    .summary-card {
+        padding: 1rem;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .alerts-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .alerts-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .alerts-layout .sidebar {
+        min-height: auto;
+        padding: 1rem;
+    }
+
+    .sidebar-brand {
+        margin-bottom: 1rem;
+    }
+
+    .sidebar-brand img {
+        width: 150px;
+    }
+
+    .sidebar-label {
+        display: none;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar-link {
+        padding: 0.65rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .sidebar-bottom {
+        margin-top: 0.8rem;
+    }
+
+    .alerts-main {
+        padding: 1.5rem 1rem;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .alerts-topbar h1 {
+        font-size: 1.6rem;
+    }
+
+    .topbar-user span:last-child {
+        display: none;
+    }
+
+    .alerts-content {
+        padding: 1rem;
+    }
+
+    .alert-card {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 0.8rem;
+    }
+
+    .alert-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .alert-action {
+        grid-column: 2;
+    }
+
+    .alert-filters {
+        gap: 1rem;
+    }
+
+    .alert-filter {
+        font-size: 0.8rem;
+    }
+
+}
