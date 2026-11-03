@@ -1,26 +1,301 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My profile | Training Events</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | Levent</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
-<body>
-  <!-- Owner: Shaima | Module 1 -->
-  <div id="site-header"></div>
 
-  <main class="container py-4">
-    <h1>My profile</h1>
-    <!-- TODO: page content -->
-  </main>
+<body class="profile-page">
 
-  <div id="site-footer"></div>
+    <div class="app-layout">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/data.js"></script>
-  <script src="assets/js/layout.js"></script>
-  <script src="assets/js/auth.js"></script>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <!-- Logo -->
+            <a href="index.html" class="sidebar-brand">
+                <img
+                    src="assets/img/logo.png"
+                    alt="Levent - Learn, Connect, Grow"
+                >
+            </a>
+
+
+            <nav class="sidebar-nav" aria-label="Main navigation">
+
+                <a href="index.html" class="sidebar-link">
+                    <span class="nav-icon">⌂</span>
+                    Home
+                </a>
+
+                <a href="profile.html"
+                   class="sidebar-link active"
+                   aria-current="page">
+                    <span class="nav-icon">◉</span>
+                    My Profile
+                </a>
+
+                <a href="alerts.html" class="sidebar-link">
+                    <span class="nav-icon">♧</span>
+                    Alerts
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="login.html" class="sidebar-link logout-link">
+                    <span class="nav-icon">↪</span>
+                    Log out
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="profile-main">
+
+            <!-- TOP BAR -->
+            <header class="profile-topbar">
+
+                <div>
+                    <p class="profile-breadcrumb">
+                        Home / My Profile
+                    </p>
+
+                    <h1>My Profile</h1>
+                </div>
+
+                <div class="topbar-user">
+
+                    <span class="topbar-avatar">YN</span>
+
+                    <span>Shaima Abdulsalam</span>
+
+                </div>
+
+            </header>
+
+
+            <!-- PROFILE OVERVIEW -->
+            <section class="profile-overview">
+
+                <div class="profile-avatar">
+                    SA
+                </div>
+
+                <div class="profile-identity">
+
+                    <p class="profile-eyebrow">YOUR ACCOUNT</p>
+
+                    <h2>Shaima</h2>
+
+                    <p>shayyima_4421@limu.edu.ly</p>
+
+                    <span class="profile-role">
+                        Participant
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROFILE CONTENT -->
+            <div class="profile-grid">
+
+
+                <!-- PERSONAL INFORMATION -->
+                <section class="profile-card">
+
+                    <div class="profile-card-heading">
+
+                        <div>
+                            <h2>Personal Information</h2>
+
+                            <p>
+                                Manage your personal details.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <form class="profile-form">
+
+                        <div class="profile-fields">
+
+                            <div class="profile-field">
+
+                                <label for="full-name">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="full-name"
+                                    name="full-name"
+                                    value="Your Name"
+                                >
+
+                            </div>
+
+
+                            <div class="profile-field">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value="you@example.com"
+                                >
+
+                            </div>
+
+
+                            <div class="profile-field">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Add your phone number"
+                                >
+
+                            </div>
+
+
+                            <div class="profile-field">
+
+                                <label for="organization">
+                                    Organization
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="organization"
+                                    name="organization"
+                                    placeholder="Enter your organization"
+                                >
+
+                            </div>
+
+
+                            <div class="profile-field full-width">
+
+                                <label for="bio">
+                                    About Me
+                                </label>
+
+                                <textarea
+                                    id="bio"
+                                    name="bio"
+                                    rows="4"
+                                    placeholder="Tell us a little about yourself..."
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-actions">
+
+                            <button type="reset" class="cancel-button">
+                                Reset
+                            </button>
+
+                            <!-- Visual prototype button -->
+                            <button type="button" class="save-button">
+                                Save Changes
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- ACCOUNT INFORMATION -->
+                <aside class="profile-side-content">
+
+                    <section class="profile-card account-card">
+
+                        <h2>Account Information</h2>
+
+                        <p class="account-description">
+                            Information about your Levent account.
+                        </p>
+
+                        <div class="account-detail">
+
+                            <span>Account Role</span>
+
+                            <strong>Participant</strong>
+
+                        </div>
+
+                        <div class="account-detail">
+
+                            <span>Account Email</span>
+
+                            <strong>you@example.com</strong>
+
+                        </div>
+
+                    </section>
+
+
+                    <section class="profile-card about-card">
+
+                        <div class="about-icon">✦</div>
+
+                        <h3>Welcome to Levent!</h3>
+
+                        <p>
+                            Learn, connect and grow through
+                            training opportunities.
+                        </p>
+
+                        <a href="index.html">
+                            Explore Levent →
+                        </a>
+
+                    </section>
+
+                </aside>
+
+            </div>
+
+        </main>
+
+    </div>
+
 </body>
 </html>
