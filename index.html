@@ -18,8 +18,7 @@
 
     <!-- Our shared CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!---homepage css-->
-    <link rel="stylesheet" href="assets/css/Home.css">
+
 </head>
 
 <body>
@@ -86,10 +85,30 @@
                     with professional trainers.
                 </p>
 
-                <a href="participant/trainings.html"
-                   class="btn btn-primary hero-button">
-                    Explore Trainings →
-                </a>
+
+        <form class="hero-search"
+            action="participant/trainings.html"
+            method="get">
+
+            <span class="search-icon" aria-hidden="true"></span>
+
+            <label for="hero-search-input" class="visually-hidden">
+                Search for training opportunities
+            </label>
+
+            <input
+                type="search"
+                id="hero-search-input"
+                name="q"
+                placeholder="Search by skill, topic or trainer..."
+            >
+
+            <button type="submit">
+                Explore
+            </button>
+
+        </form>
+
 
             </div>
 
@@ -138,27 +157,117 @@
     <!-- UPCOMING TRAININGS -->
     <section class="upcoming-trainings container">
 
+        
         <div class="section-heading">
 
             <div>
-                <p class="eyebrow">DISCOVER OPPORTUNITIES</p>
-                <h2>Upcoming Trainings</h2>
+                <p class="eyebrow">EXPLORE OPPORTUNITIES</p>
+
+                <h2>Find your next training</h2>
+
                 <p class="muted">
-                    Find the right training to develop your skills.
+                    Discover workshops, courses and internships
+                    from professional trainers.
                 </p>
             </div>
 
             <a href="participant/trainings.html" class="show-more">
-                View all trainings →
+                View full catalogue →
             </a>
 
         </div>
+
+        
+<div class="training-browser">
+
+    <!-- CSS-only filter controls -->
+    <input type="radio"
+           name="training-type"
+           id="filter-all"
+           class="filter-toggle"
+           checked>
+
+    <input type="radio"
+           name="training-type"
+           id="filter-workshops"
+           class="filter-toggle">
+
+    <input type="radio"
+           name="training-type"
+           id="filter-courses"
+           class="filter-toggle">
+
+    <input type="radio"
+           name="training-type"
+           id="filter-internships"
+           class="filter-toggle">
+
+
+    <!-- Filters and catalogue search -->
+    <div class="training-toolbar">
+
+        <div class="training-filters"
+             aria-label="Filter trainings by type">
+
+            <label for="filter-all" class="filter-chip">
+                All trainings
+            </label>
+
+            <label for="filter-workshops" class="filter-chip">
+                Workshops
+            </label>
+
+            <label for="filter-courses" class="filter-chip">
+                Courses
+            </label>
+
+            <label for="filter-internships" class="filter-chip">
+                Internships
+            </label>
+
+        </div>
+
+
+        <!-- Second search bar -->
+        <form class="catalog-search"
+              action="participant/trainings.html"
+              method="get">
+
+            <span class="search-icon" aria-hidden="true"></span>
+
+            <label for="catalog-search-input"
+                   class="visually-hidden">
+                Search trainings
+            </label>
+
+            <input
+                type="search"
+                id="catalog-search-input"
+                name="q"
+                placeholder="Search trainings..."
+            >
+
+        </form>
+
+    </div>
+
+
+    <!-- Keep your existing training-grid here -->
+    <div class="training-grid">
+
+        <!-- DO NOT REWRITE YOUR EXISTING TRAINING CARDS -->
+
+    </div>
+
+</div>
+
+
 
 
         <div class="training-grid">
 
             <!-- Training 1 -->
-            <article class="training-card">
+            <article class="training-card" data-type="Bootcamp">
 
                 <img src="assets/img/data-analytics.jpg"
                      alt="Data Analytics Bootcamp"
@@ -208,7 +317,7 @@
 
 
             <!-- Training 2 -->
-            <article class="training-card">
+            <article class="training-card" data-type="Workshop">
 
                 <img src="assets/img/ui-ux.jpg"
                      alt="UI and UX design workshop"
@@ -258,7 +367,7 @@
 
 
             <!-- Training 3 -->
-            <article class="training-card">
+            <article class="training-card" data-type="Course">
 
                 <img src="assets/img/project-management.jpg"
                      alt="Team collaborating on project management"
