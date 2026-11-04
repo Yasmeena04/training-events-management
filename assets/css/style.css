@@ -185,3 +185,145 @@ dl.kv dt{color:var(--muted);font-weight:600} dl.kv dd{margin:0;font-weight:600}
     object-fit: cover;
     object-position: center;
 }
+
+/* =====================================================
+   PARTICIPANT PAGES (trainings.html, my-trainings.html) - owner: Shora
+   Header/footer rules are scoped (.app-header / .app-footer)
+   so they do not change the shared header and footer.
+===================================================== */
+:root {
+  --navy: #1a1033;
+  --navy-soft: #312848;
+  --lilac: #c4b5fd;
+  --purple: #5b3fd8;
+}
+
+/* Header */
+.app-header { background-color: var(--navy); }
+.app-header .brand-logo { height: 100px; width: auto; display: block; }
+.app-nav a { color: var(--lilac); text-decoration: none; font-weight: 500; }
+.app-nav a:hover { color: #fff; }
+.app-nav a.active { color: #fff; font-weight: 700; }
+
+.app-header .role-select {
+  background-color: var(--navy-soft);
+  color: #fff;
+  border: 0;
+  border-radius: 14px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  width: auto;
+  background-image: none;
+}
+.app-header .role-select:focus { background-color: var(--navy-soft); color: #fff; box-shadow: none; }
+.app-header .role-select option { color: #222; }
+
+.bell-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--navy-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.bell-btn .dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 11px;
+  height: 11px;
+  background: #ff8a3d;
+  border-radius: 50%;
+  border: 2px solid var(--navy);
+}
+
+.user-pill {
+  background: #fff;
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 0.3rem 1rem 0.3rem 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+}
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eee9ff;
+  color: var(--purple);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+.app-footer { background-color: var(--navy); color: #fff; }
+.app-footer .brand-logo { height: 60px; width: auto; display: block; }
+.footer-sub { font-size: 0.75rem; letter-spacing: 0.1em; color: var(--lilac); }
+.footer-tagline { color: var(--lilac); }
+
+/* Buttons */
+.btn-custom-purple {
+  background-color: var(--purple);
+  border-color: var(--purple);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 12px;
+}
+.btn-custom-purple:hover {
+  background-color: #4c32b8;
+  border-color: #4c32b8;
+  color: #fff;
+}
+
+/* Training cards */
+.custom-training-card {
+  border-radius: 20px;
+  border: 1px solid #eaeaea;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #fff;
+}
+.custom-training-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06) !important;
+}
+
+.card-img-placeholder {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #f1f3f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8c93a4;
+  font-size: 0.85rem;
+}
+
+.category-pill {
+  background-color: #f0ebff;
+  color: var(--purple);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.seats-text { color: #10b981; font-weight: 600; }
+.details-link { color: var(--purple); text-decoration: none; font-weight: 600; }
+.details-link:hover { text-decoration: underline; }
+
+/* My trainings status badges */
+.badge-awaiting { background-color: #212529; color: #fff; }
+.badge-review { background-color: #212529; color: #fff; }
+.badge-confirmed { background-color: #212529; color: #fff; }
