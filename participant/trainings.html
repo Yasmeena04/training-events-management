@@ -8,92 +8,105 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
     :root {
-  --navy: #1a1033;
-  --navy-soft: #312848;
-  --lilac: #c4b5fd;
-  --purple: #5b3fd8;
-}
+      --navy: #1a1033;
+      --navy-soft: #312848;
+      --lilac: #c4b5fd;
+      --purple: #5b3fd8;
+    }
 
-body {
-  background-color: #f8f9fa;
-  color: #333;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-main { flex: 1; }
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main { flex: 1; }
 
-/* Header */
-.app-header { background-color: var(--navy); }
-.brand-logo { height: 60px; width: auto; display: block; } /* Increased logo height */
-.app-nav a { color: var(--lilac); text-decoration: none; font-weight: 500; }
-.app-nav a:hover { color: #fff; }
-.app-nav a.active { color: #fff; font-weight: 700; }
+    /* Header */
+    .app-header { background-color: var(--navy); }
+    .brand-logo { height: 60px; width: auto; display: block; } /* Increased logo height */
+    .app-nav a { color: var(--lilac); text-decoration: none; font-weight: 500; }
+    .app-nav a:hover { color: #fff; }
+    .app-nav a.active { color: #fff; font-weight: 700; }
 
-.role-select {
-  background-color: var(--navy-soft);
-  color: #fff;
-  border: 0;
-  border-radius: 14px;
-  padding: 0.6rem 1.2rem;
-  font-weight: 500;
-  width: auto;
-  background-image: none;
-}
-.role-select:focus { background-color: var(--navy-soft); color: #fff; box-shadow: none; }
-.role-select option { color: #222; }
+    .role-select {
+      background-color: var(--navy-soft);
+      color: #fff;
+      border: 0;
+      border-radius: 14px;
+      padding: 0.6rem 1.2rem;
+      font-weight: 500;
+      width: auto;
+      background-image: none;
+    }
+    .role-select:focus { background-color: var(--navy-soft); color: #fff; box-shadow: none; }
+    .role-select option { color: #222; }
 
-.bell-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--navy-soft);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-.bell-btn .dot {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 11px;
-  height: 11px;
-  background: #ff8a3d;
-  border-radius: 50%;
-  border: 2px solid var(--navy);
-}
+    .bell-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--navy-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    .bell-btn .dot {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 11px;
+      height: 11px;
+      background: #ff8a3d;
+      border-radius: 50%;
+      border: 2px solid var(--navy);
+    }
 
-.user-pill {
-  background: #fff;
-  color: var(--navy);
-  border-radius: 999px;
-  padding: 0.3rem 1rem 0.3rem 0.4rem;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 600;
-}
-.user-avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #eee9ff;
-  color: var(--purple);
-  font-size: 0.8rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .user-pill {
+      background: #fff;
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 0.3rem 1rem 0.3rem 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 600;
+    }
+    .user-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #eee9ff;
+      color: var(--purple);
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-/* Footer */
-.app-footer { background-color: var(--navy); color: #fff; }
-.footer-sub { font-size: 0.75rem; letter-spacing: 0.1em; color: var(--lilac); }
-.footer-tagline { color: var(--lilac); }
+    /* Footer */
+    .app-footer { background-color: var(--navy); color: #fff; }
+    .footer-sub { font-size: 0.75rem; letter-spacing: 0.1em; color: var(--lilac); }
+    .footer-tagline { color: var(--lilac); }
 
+    /* Custom Theme Buttons */
+    .btn-custom-purple {
+      background-color: var(--purple);
+      border-color: var(--purple);
+      color: #fff;
+      font-weight: 500;
+      border-radius: 10px;
+    }
+    .btn-custom-purple:hover {
+      background-color: #4c32b8;
+      border-color: #4c32b8;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -101,35 +114,35 @@ main { flex: 1; }
   <!-- Owner: Shora | Module 4 -->
   <!-- Header -->
   <header class="app-header text-white py-3">
-  <div class="container d-flex justify-content-between align-items-center">
+    <div class="container d-flex justify-content-between align-items-center">
 
-    <a href="index.html" class="text-decoration-none">
-      <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
-    </a>
+      <a href="index.html" class="text-decoration-none">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+      </a>
 
-    <nav class="app-nav d-none d-md-flex align-items-center gap-4">
-      <a href="trainings.html" class="active">Discover</a>
-      <a href="my-trainings.html">My trainings</a>
-      <a href="certificate.html">Certificates</a>
-    </nav>
+      <nav class="app-nav d-none d-md-flex align-items-center gap-4">
+        <a href="trainings.html" class="active">Discover</a>
+        <a href="my-trainings.html">My trainings</a>
+        <a href="certificate.html">Certificates</a>
+      </nav>
 
-    <div class="d-flex align-items-center gap-3">
-      <select class="form-select role-select" aria-label="Role">
-        <option value="participant">Participant</option>
-        <option value="trainer">Trainer</option>
-        <option value="manager">Manager</option>
-      </select>
+      <div class="d-flex align-items-center gap-3">
+        <select class="form-select role-select" aria-label="Role">
+          <option value="participant">Participant</option>
+          <option value="trainer">Trainer</option>
+          <option value="manager">Manager</option>
+        </select>
 
-      <a href="#" class="bell-btn" aria-label="Notifications">🔔<span class="dot"></span></a>
+        <a href="#" class="bell-btn" aria-label="Notifications">🔔<span class="dot"></span></a>
 
-      <div class="user-pill">
-        <div class="user-avatar" id="user-initials">G2</div>
-        <span id="user-name">Group 2</span>
+        <div class="user-pill">
+          <div class="user-avatar" id="user-initials">G2</div>
+          <span id="user-name">Group 2</span>
+        </div>
       </div>
-    </div>
 
-  </div>
-</header>
+    </div>
+  </header>
 
   <!-- Search Hero Section -->
   <section class="bg-white py-4 border-bottom">
@@ -142,7 +155,7 @@ main { flex: 1; }
           <input type="text" id="search-input" class="form-control" placeholder="Search by title, topic or trainer">
         </div>
         <div class="col-auto">
-          <button type="submit" class="btn btn-dark">Search</button>
+          <button type="submit" class="btn btn-custom-purple px-4">Search</button>
         </div>
       </form>
     </div>
@@ -199,7 +212,7 @@ main { flex: 1; }
             </div>
 
             <div class="d-flex align-items-center gap-3">
-              <button type="button" id="apply-filters" class="btn btn-dark">Apply filters</button>
+              <button type="button" id="apply-filters" class="btn btn-custom-purple">Apply filters</button>
               <a href="#" id="clear-filters" class="text-decoration-none text-muted">Clear</a>
             </div>
           </div>
@@ -240,7 +253,7 @@ main { flex: 1; }
                 <p class="small text-muted mb-1">Starts 12 Nov · 1 day</p>
                 <p class="small text-muted mb-1">Trainer: Sara M.</p>
                 <p class="small text-muted mb-3">Seats left: 8 of 30</p>
-                <a href="training-details.html" class="btn btn-outline-dark w-100 mt-auto">View details</a>
+                <a href="training-details.html" class="btn btn-custom-purple w-100 mt-auto">View details</a>
               </div>
             </div>
           </div>
@@ -258,7 +271,7 @@ main { flex: 1; }
                 <p class="small text-muted mb-1">Starts 17 Nov · 4 weeks</p>
                 <p class="small text-muted mb-1">Trainer: Code Academy</p>
                 <p class="small text-muted mb-3">Seats left: 6 of 25</p>
-                <a href="training-details.html" class="btn btn-outline-dark w-100 mt-auto">View details</a>
+                <a href="training-details.html" class="btn btn-custom-purple w-100 mt-auto">View details</a>
               </div>
             </div>
           </div>
@@ -276,7 +289,7 @@ main { flex: 1; }
                 <p class="small text-muted mb-1">Starts 1 Dec · 6 weeks</p>
                 <p class="small text-muted mb-1">Trainer: TechWorks Co.</p>
                 <p class="small text-muted mb-3">Seats left: 3 of 10</p>
-                <a href="training-details.html" class="btn btn-outline-dark w-100 mt-auto">View details</a>
+                <a href="training-details.html" class="btn btn-custom-purple w-100 mt-auto">View details</a>
               </div>
             </div>
           </div>
@@ -294,7 +307,7 @@ main { flex: 1; }
                 <p class="small text-muted mb-1">Starts 20 Nov · 3 days</p>
                 <p class="small text-muted mb-1">Trainer: Omar K.</p>
                 <p class="small text-muted mb-3">Seats left: 12 of 20</p>
-                <a href="training-details.html" class="btn btn-outline-dark w-100 mt-auto">View details</a>
+                <a href="training-details.html" class="btn btn-custom-purple w-100 mt-auto">View details</a>
               </div>
             </div>
           </div>
@@ -312,7 +325,7 @@ main { flex: 1; }
                 <p class="small text-muted mb-1">Starts 25 Nov · 2 weeks</p>
                 <p class="small text-muted mb-1">Trainer: Data Lab</p>
                 <p class="small text-muted mb-3">Seats left: 10 of 30</p>
-                <a href="training-details.html" class="btn btn-outline-dark w-100 mt-auto">View details</a>
+                <a href="training-details.html" class="btn btn-custom-purple w-100 mt-auto">View details</a>
               </div>
             </div>
           </div>
@@ -330,7 +343,7 @@ main { flex: 1; }
                 <p class="small text-muted mb-1">Starts 28 Nov · 1 day</p>
                 <p class="small text-muted mb-1">Trainer: Huda A.</p>
                 <p class="small text-muted mb-3">Seats left: 15 of 40</p>
-                <a href="training-details.html" class="btn btn-outline-dark w-100 mt-auto">View details</a>
+                <a href="training-details.html" class="btn btn-custom-purple w-100 mt-auto">View details</a>
               </div>
             </div>
           </div>
@@ -348,7 +361,7 @@ main { flex: 1; }
                 <p class="small text-muted mb-1">Starts 2 Dec · 3 weeks</p>
                 <p class="small text-muted mb-1">Trainer: Leila B.</p>
                 <p class="small text-muted mb-3">Seats left: 4 of 20</p>
-                <a href="training-details.html" class="btn btn-outline-dark w-100 mt-auto">View details</a>
+                <a href="training-details.html" class="btn btn-custom-purple w-100 mt-auto">View details</a>
               </div>
             </div>
           </div>
@@ -366,7 +379,7 @@ main { flex: 1; }
                 <p class="small text-muted mb-1">Starts 5 Dec · 2 days</p>
                 <p class="small text-muted mb-1">Trainer: Tarek M.</p>
                 <p class="small text-muted mb-3">Seats left: 7 of 25</p>
-                <a href="training-details.html" class="btn btn-outline-dark w-100 mt-auto">View details</a>
+                <a href="training-details.html" class="btn btn-custom-purple w-100 mt-auto">View details</a>
               </div>
             </div>
           </div>
@@ -389,14 +402,14 @@ main { flex: 1; }
 
   <!-- Footer -->
   <footer class="app-footer py-4 mt-5">
-  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-    <div class="d-flex align-items-center gap-3">
-      <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
-      <div class="footer-sub">Training Events Management System</div>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="d-flex align-items-center gap-3">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+        <div class="footer-sub">Training Events Management System</div>
+      </div>
+      <p class="footer-tagline mb-0">A single place to discover, manage and complete training.</p>
     </div>
-    <p class="footer-tagline mb-0">A single place to discover, manage and complete training.</p>
-  </div>
-</footer>
+  </footer>
 
   <script>
     // Fill the header user pill with the logged-in user's name.
