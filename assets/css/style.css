@@ -38,16 +38,27 @@ a{color:var(--brand-dark)}
     background: transparent;
 }
 
+.footer-brand p {
+    margin-left: 32px; /* lines the tagline up with the logo mark */
+}
+
+/* Footer logo: one size for every page that uses .site-footer */
 .site-footer .brand-logo {
-    width: 190px;
-    height: 58px;
-    object-fit: contain;
+    width: 240px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
 }
 
 @media (max-width: 600px) {
     .brand-logo {
         width: 165px;
         height: 50px;
+    }
+
+    .site-footer .brand-logo {
+        width: 200px;
+        height: 66px;
     }
 }
 
@@ -60,7 +71,7 @@ a{color:var(--brand-dark)}
 .bell i{position:absolute;top:9px;right:10px;width:9px;height:9px;border-radius:50%;background:#ff8a3d;border:2px solid var(--night)}
 .user-chip{display:flex;align-items:center;gap:.6rem;background:#fff;color:var(--night)!important;border-radius:999px;padding:.35rem 1rem .35rem .4rem;font-weight:700}
 .avatar{width:34px;height:34px;border-radius:50%;background:var(--tint);color:var(--brand-dark);display:grid;place-items:center;font-weight:800;font-size:.78rem}
-.role-select{width:auto;background-color:rgba(255,255,255,.1);color:#fff;border:0;border-radius:999px;font-weight:600;font-size:.875rem;padding:.5rem 2rem .5rem 1rem}
+.role-select{width:auto;min-width:10rem;background-color:rgba(255,255,255,.1);color:#fff;border:0;border-radius:999px;font-weight:600;font-size:.875rem;padding:.5rem 2rem .5rem 1rem}
 .role-select{--bs-form-select-bg-img:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e")}
 .role-select option{color:#000}
 .site-footer{background:var(--night);color:#a99cd9;padding:2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.875rem}
@@ -1498,13 +1509,6 @@ body.profile-page {
     text-decoration: none;
 }
 
-.sidebar-brand img {
-    display: block;
-    width: 175px;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
 
 .sidebar-label {
     color: #A99CD9;
@@ -1971,9 +1975,6 @@ body.profile-page {
         margin-bottom: 1rem;
     }
 
-    .sidebar-brand img {
-        width: 150px;
-    }
 
     .sidebar-label {
         display: none;
@@ -2084,13 +2085,6 @@ body.alerts-page {
     text-decoration: none;
 }
 
-.sidebar-brand img {
-    display: block;
-    width: 175px;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
 
 .sidebar-label {
     color: #A99CD9;
@@ -2616,9 +2610,6 @@ label[for="alerts-read"] {
         margin-bottom: 1rem;
     }
 
-    .sidebar-brand img {
-        width: 150px;
-    }
 
     .sidebar-label {
         display: none;

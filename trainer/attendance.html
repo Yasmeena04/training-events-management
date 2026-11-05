@@ -8,7 +8,29 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-role="trainer" data-page="attendance">
-<div id="site-header"></div>
+  <!-- Header (same layout as the homepage) -->
+  <header class="site-header">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="Levent — Learn, Connect, Grow" class="brand-logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../trainer/my-trainings.html">My trainings</a>
+      <a href="../trainer/new-request.html">New request</a>
+      <a href="../trainer/attendance.html" class="active" aria-current="page">Attendance</a>
+      <a href="../trainer/applications.html">Applications</a>
+    </nav>
+    <div class="header-tools">
+      <label for="role-switch" class="visually-hidden">Switch role</label>
+      <select id="role-switch" class="form-select role-select" onchange="location.href = this.value">
+        <option value="../participant/trainings.html">Participant</option>
+        <option value="../trainer/my-trainings.html" selected>Trainer</option>
+        <option value="../manager/requests.html">Manager</option>
+        <option value="../admin/dashboard.html">Admin</option>
+      </select>
+      <a href="../alerts.html" class="bell" aria-label="Alerts">&#128276;<i></i></a>
+      <a href="../profile.html" class="user-chip"><span class="avatar">TB</span><span>TechBridge Institute</span></a>
+    </div>
+  </header>
 <main class="container">
 <div class="page-head"><p class="eyebrow">Trainer</p><h1>Attendance</h1><p class="muted" id="att-info">Mark who attended each session.</p></div>
 <div class="layout-2"><div>
@@ -20,9 +42,15 @@
 <aside class="card side"><h3>Finish the training</h3><p class="small muted">After the last session, complete the training. The system issues a certificate with a unique number to every participant who meets the attendance minimum. The others are marked “Not completed”.</p>
 <button class="btn btn-primary w-100" id="complete-btn">Complete training and issue certificates</button></aside></div>
 </main>
-<div id="site-footer"></div>
-<script src="../assets/js/data.js"></script>
-<script src="../assets/js/layout.js"></script>
-<script src="../assets/js/attendance.js"></script>
+  <!-- Footer (same layout as the homepage) -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+      </a>
+      <p>LEARN · CONNECT · GROW</p>
+    </div>
+    <p>&copy; 2026 Training Events. All rights reserved.</p>
+  </footer>
 </body>
 </html>
