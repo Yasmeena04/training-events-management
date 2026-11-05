@@ -85,6 +85,413 @@
 
             <!-- TODO: page content -->
 
+            
+<!-- PAGE INTRODUCTION -->
+<section class="categories-intro">
+
+    <div>
+        <p class="categories-eyebrow">ADMINISTRATION</p>
+
+        <h2>Training Categories</h2>
+
+        <p>
+            Organize and manage the categories used
+            to classify training events.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- CATEGORY STATISTICS -->
+<section class="category-stats">
+
+    <article class="category-stat-card">
+
+        <div class="category-stat-icon total-icon">▦</div>
+
+        <div>
+            <p>Total Categories</p>
+            <h2>6</h2>
+        </div>
+
+    </article>
+
+
+    <article class="category-stat-card">
+
+        <div class="category-stat-icon active-icon">✓</div>
+
+        <div>
+            <p>Active Categories</p>
+            <h2>5</h2>
+        </div>
+
+    </article>
+
+
+    <article class="category-stat-card">
+
+        <div class="category-stat-icon inactive-icon">○</div>
+
+        <div>
+            <p>Inactive Categories</p>
+            <h2>1</h2>
+        </div>
+
+    </article>
+
+</section>
+
+
+<!-- CATEGORY MANAGEMENT -->
+<section class="category-management">
+
+    <div class="category-toolbar">
+
+        <div>
+            <h2>All Categories</h2>
+            <p>Manage your training categories.</p>
+        </div>
+
+
+        <!-- SEARCH -->
+        <div class="category-actions">
+
+            <form class="category-search" action="#" method="get">
+
+                <label for="category-search" class="visually-hidden">
+                    Search categories
+                </label>
+
+                <input
+                    type="search"
+                    id="category-search"
+                    name="q"
+                    placeholder="Search categories..."
+                >
+
+                <button type="submit" aria-label="Search">
+                    ⌕
+                </button>
+
+            </form>
+
+
+            <!-- ADD CATEGORY FORM -->
+            <details class="add-category-dropdown">
+
+                <summary>
+                    + Add Category
+                </summary>
+
+                <div class="category-form">
+
+                    <h3>Add New Category</h3>
+
+                    <form action="#" method="get">
+
+                        <div class="category-form-field">
+
+                            <label for="new-category">
+                                Category Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="new-category"
+                                name="category"
+                                placeholder="Enter category name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="category-form-field">
+
+                            <label for="category-description">
+                                Description
+                            </label>
+
+                            <textarea
+                                id="category-description"
+                                name="description"
+                                rows="3"
+                                placeholder="Describe this category..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="category-form-field">
+
+                            <label for="category-status">
+                                Status
+                            </label>
+
+                            <select
+                                id="category-status"
+                                name="status"
+                            >
+
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="category-form-buttons">
+
+                            <button type="reset" class="category-cancel">
+                                Clear
+                            </button>
+
+                            <button type="button" class="category-save">
+                                Save Category
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+
+    <!-- CATEGORIES TABLE -->
+    <div class="categories-table-wrapper">
+
+        <table class="categories-table">
+
+            <thead>
+
+                <tr>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Trainings</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+                        <strong>Technology</strong>
+                    </td>
+
+                    <td>
+                        Programming, software and digital skills.
+                    </td>
+
+                    <td>8</td>
+
+                    <td>
+                        <span class="category-status active">
+                            Active
+                        </span>
+                    </td>
+
+                    <td>
+                        <div class="category-row-actions">
+                            <button type="button" class="edit-category">
+                                Edit
+                            </button>
+
+                            <button type="button" class="delete-category">
+                                Delete
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Professional Skills</strong>
+                    </td>
+
+                    <td>
+                        Leadership, communication and career development.
+                    </td>
+
+                    <td>5</td>
+
+                    <td>
+                        <span class="category-status active">
+                            Active
+                        </span>
+                    </td>
+
+                    <td>
+                        <div class="category-row-actions">
+                            <button type="button" class="edit-category">
+                                Edit
+                            </button>
+
+                            <button type="button" class="delete-category">
+                                Delete
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Creative Workshops</strong>
+                    </td>
+
+                    <td>
+                        Design, creativity and artistic skills.
+                    </td>
+
+                    <td>4</td>
+
+                    <td>
+                        <span class="category-status active">
+                            Active
+                        </span>
+                    </td>
+
+                    <td>
+                        <div class="category-row-actions">
+                            <button type="button" class="edit-category">
+                                Edit
+                            </button>
+
+                            <button type="button" class="delete-category">
+                                Delete
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Business & Entrepreneurship</strong>
+                    </td>
+
+                    <td>
+                        Business development and entrepreneurship.
+                    </td>
+
+                    <td>3</td>
+
+                    <td>
+                        <span class="category-status active">
+                            Active
+                        </span>
+                    </td>
+
+                    <td>
+                        <div class="category-row-actions">
+                            <button type="button" class="edit-category">
+                                Edit
+                            </button>
+
+                            <button type="button" class="delete-category">
+                                Delete
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Language & Communication</strong>
+                    </td>
+
+                    <td>
+                        Language learning and communication skills.
+                    </td>
+
+                    <td>4</td>
+
+                    <td>
+                        <span class="category-status active">
+                            Active
+                        </span>
+                    </td>
+
+                    <td>
+                        <div class="category-row-actions">
+                            <button type="button" class="edit-category">
+                                Edit
+                            </button>
+
+                            <button type="button" class="delete-category">
+                                Delete
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Arts & Culture</strong>
+                    </td>
+
+                    <td>
+                        Arts, cultural activities and creative expression.
+                    </td>
+
+                    <td>0</td>
+
+                    <td>
+                        <span class="category-status inactive">
+                            Inactive
+                        </span>
+                    </td>
+
+                    <td>
+                        <div class="category-row-actions">
+                            <button type="button" class="edit-category">
+                                Edit
+                            </button>
+
+                            <button type="button" class="delete-category">
+                                Delete
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
         </main>
 
     </div>
