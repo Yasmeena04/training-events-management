@@ -13,182 +13,40 @@
   <!-- Header -->
   <header class="app-header text-white py-3">
     <div class="container d-flex justify-content-between align-items-center">
-
-      <a href="index.html" class="text-decoration-none">
+      <a href="../index.html" class="text-decoration-none">
         <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
       </a>
-
       <nav class="app-nav d-none d-md-flex align-items-center gap-4">
         <a href="trainings.html">Discover</a>
         <a href="my-trainings.html" class="active">My trainings</a>
         <a href="certificate.html">Certificates</a>
       </nav>
-
       <div class="d-flex align-items-center gap-3">
         <select class="form-select role-select" aria-label="Role">
           <option value="participant">Participant</option>
           <option value="trainer">Trainer</option>
           <option value="manager">Manager</option>
         </select>
-
         <a href="#" class="bell-btn" aria-label="Notifications">🔔<span class="dot"></span></a>
-
         <div class="user-pill">
           <div class="user-avatar" id="user-initials">G2</div>
           <span id="user-name">Group 2</span>
         </div>
       </div>
-
     </div>
   </header>
 
-  <!-- Main Content -->
   <main class="container py-5">
-    
-    <!-- Page Title Section -->
     <div class="mb-4">
       <h1 class="fw-bold mb-1">My trainings</h1>
       <p class="text-muted">Track your applications, payments, attendance and certificates.</p>
     </div>
 
-    <!-- Active Section -->
-    <h2 class="h5 fw-bold mb-3">Active (3)</h2>
-    <div class="d-flex flex-column gap-3 mb-5">
+    <h2 class="h5 fw-bold mb-3" id="active-title"></h2>
+    <div class="d-flex flex-column gap-3 mb-5" id="active-list"></div>
 
-      <!-- Active Item 1 -->
-      <div class="card shadow-sm border-0 p-3">
-        <div class="row align-items-center gy-3">
-          <div class="col-lg-8">
-            <div class="d-flex align-items-center flex-wrap gap-2 mb-1">
-              <h3 class="h6 fw-bold mb-0">Web Development Fundamentals</h3>
-              <span class="badge rounded-pill border text-dark bg-white fw-normal">Course · 150 LYD</span>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <span class="badge badge-awaiting rounded-pill px-3 py-1 small">Awaiting payment</span>
-              <span class="small text-muted">Accepted by the trainer on 3 Nov. Pay by 15 Nov to keep your seat.</span>
-            </div>
-          </div>
-          <div class="col-lg-4 text-lg-end">
-            <div class="d-flex justify-content-lg-end gap-2">
-              <a href="payment.html?id=web-dev" class="btn btn-primary">Pay now</a>
-              <a href="#" class="btn btn-outline-secondary">Withdraw</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Active Item 2 -->
-      <div class="card shadow-sm border-0 p-3">
-        <div class="row align-items-center gy-3">
-          <div class="col-lg-8">
-            <div class="d-flex align-items-center flex-wrap gap-2 mb-1">
-              <h3 class="h6 fw-bold mb-0">Summer Internship: Software Engineering</h3>
-              <span class="badge rounded-pill border text-dark bg-white fw-normal">Internship · Free</span>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <span class="badge badge-review rounded-pill px-3 py-1 small">Under review</span>
-              <span class="small text-muted">The trainer is reviewing your application, sent on 20 Oct.</span>
-            </div>
-          </div>
-          <div class="col-lg-4 text-lg-end">
-            <div class="d-flex justify-content-lg-end gap-2">
-            <a href="../trainer/applications.html?id=cybersecurity" class="btn btn-custom-purple px-3">View application</a>
-            <a href="#" class="btn btn-outline-secondary">Withdraw</a>
-         </div>
-            </div>
-          
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Active Item 3 -->
-      <div class="card shadow-sm border-0 p-3">
-        <div class="row align-items-center gy-3">
-          <div class="col-lg-8">
-            <div class="d-flex align-items-center flex-wrap gap-2 mb-1">
-              <h3 class="h6 fw-bold mb-0">Intro to Data Analytics</h3>
-              <span class="badge rounded-pill border text-dark bg-white fw-normal">Workshop · Free</span>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <span class="badge badge-confirmed rounded-pill px-3 py-1 small">Confirmed</span>
-              <span class="small text-muted">Thu 12 Nov · 9:00 – 15:00 · Room B2</span>
-            </div>
-          </div>
-          <div class="col-lg-4 text-lg-end">
-            <div class="d-flex justify-content-lg-end gap-2">
-              <a href="training-details.html" class="btn btn-custom-purple px-3">View details</a>
-              <a href="#" class="btn btn-outline-secondary">Withdraw</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Completed Section -->
-    <h2 class="h5 fw-bold mb-3">Completed (2)</h2>
-    <div class="d-flex flex-column gap-3">
-
-      <!-- Completed Item 1 -->
-      <div class="card shadow-sm border-0 p-3">
-        <div class="row align-items-center gy-3">
-          <div class="col-lg-8">
-            <div class="d-flex align-items-center flex-wrap gap-2 mb-2">
-              <h3 class="h6 fw-bold mb-0">Excel for Beginners</h3>
-              <span class="badge rounded-pill border text-dark bg-white fw-normal">Workshop</span>
-              <span class="badge rounded-pill border text-dark bg-white fw-normal">Completed</span>
-            </div>
-            <div class="mb-2">
-              <div class="d-flex justify-content-between small text-muted mb-1">
-                <span>Attendance</span>
-                <span class="fw-bold text-dark">3 of 3 sessions (100%)</span>
-              </div>
-              <div class="progress" style="height: 6px;">
-                <div class="progress-bar" role="progressbar" style="width: 100%; background-color: var(--purple);" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <p class="small text-muted mb-0">Certificate issued on 17 Oct.</p>
-          </div>
-          <div class="col-lg-4 text-lg-end">
-            <div class="d-flex justify-content-lg-end gap-2">
-              <a href="certificate.html" class="btn btn-custom-purple px-3">Download certificate</a>
-              <a href="#" class="btn btn-outline-secondary px-3">Print</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Completed Item 2 -->
-      <div class="card shadow-sm border-0 p-3">
-        <div class="row align-items-center gy-3">
-          <div class="col-lg-8">
-            <div class="d-flex align-items-center flex-wrap gap-2 mb-2">
-              <h3 class="h6 fw-bold mb-0">Teamwork and Communication</h3>
-              <span class="badge rounded-pill border text-dark bg-white fw-normal">Workshop</span>
-              <span class="badge rounded-pill border text-dark bg-white fw-normal">Not completed</span>
-            </div>
-            <div class="mb-2">
-              <div class="d-flex justify-content-between small text-muted mb-1">
-                <span>Attendance</span>
-                <span class="fw-bold text-dark">1 of 2 sessions (50%)</span>
-              </div>
-              <div class="progress" style="height: 6px;">
-                <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <p class="small text-muted mb-0">The minimum for a certificate was 80% attendance.</p>
-          </div>
-          <div class="col-lg-4 text-lg-end">
-            <div class="d-flex justify-content-lg-end">
-              <button class="btn btn-outline-secondary text-muted bg-light border-0 px-3" disabled style="cursor: not-allowed;">No certificate</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
+    <h2 class="h5 fw-bold mb-3" id="done-title"></h2>
+    <div class="d-flex flex-column gap-3" id="done-list"></div>
   </main>
 
   <!-- Footer -->
@@ -203,7 +61,7 @@
   </footer>
 
   <script>
-    // Fill the header user pill with the logged-in user's name.
+    // Header user pill
     (function () {
       var name = localStorage.getItem("userName") || "Group 2";
       var initials = name.trim().split(/\s+/).slice(0, 2)
@@ -211,7 +69,78 @@
       document.getElementById("user-name").textContent = name;
       document.getElementById("user-initials").textContent = initials;
     })();
-  </script>
 
+    var active = [
+      { id: "web-dev",    title: "Web Development Fundamentals", info: "Course · 150 LYD", status: "Awaiting payment", note: "Accepted by the trainer on 3 Nov. Pay by 15 Nov to keep your seat." },
+      { id: "summer",     title: "Summer Internship: Software Engineering", info: "Internship · Free", status: "Under review", note: "The trainer is reviewing your application, sent on 20 Oct." },
+      { id: "intro-data", title: "Intro to Data Analysis", info: "Workshop · Free", status: "Confirmed", note: "Thu 12 Nov · 9:00 – 15:00 · Room B2" },
+      { id: "int-to-ai",  title: "Machine Learning Bootcamp", info: "Course · 200 LYD", status: "Waitlisted", note: "The course is full. You are on the waitlist." },
+      { id: "cyber",      title: "Cybersecurity Awareness", info: "Workshop · Free", status: "Declined", note: "The trainer declined your application." }
+    ];
+
+    var done = [
+      { title: "Excel for Beginners", info: "Workshop", status: "Completed", attended: 3, total: 3, note: "Certificate issued on 17 Oct." },
+      { title: "Teamwork and Communication", info: "Workshop", status: "Not completed", attended: 1, total: 2, note: "The minimum for a certificate was 80% attendance." }
+    ];
+
+    var tagOf = { "Awaiting payment": "warn", "Under review": "", "Confirmed": "ok",
+                  "Waitlisted": "warn", "Declined": "bad", "Withdrawn": "bad" };
+
+    function buttons(t, i) {
+      var html = "";
+      if (t.status === "Awaiting payment")
+        html += '<a href="payment.html?id=' + t.id + '" class="btn btn-primary">Pay now</a>';
+      if (t.status !== "Awaiting payment" && t.status !== "Withdrawn")
+        html += '<a href="training-details.html?id=' + t.id + '" class="btn btn-soft">View details</a>';
+      if (t.status !== "Declined" && t.status !== "Withdrawn")
+        html += '<button class="btn btn-outline-secondary" onclick="withdraw(' + i + ')">Withdraw</button>';
+      return html;
+    }
+
+    function render() {
+      document.getElementById("active-title").textContent = "Active (" + active.length + ")";
+      document.getElementById("active-list").innerHTML = active.map(function (t, i) {
+        return '<div class="card"><div class="row align-items-center gy-3">' +
+          '<div class="col-lg-8">' +
+            '<div class="d-flex align-items-center flex-wrap gap-2 mb-2"><h3 class="h6 fw-bold mb-0">' + t.title + '</h3>' +
+            '<span class="tag">' + t.info + '</span></div>' +
+            '<span class="tag ' + tagOf[t.status] + ' me-2">' + t.status + '</span>' +
+            '<span class="small text-muted">' + t.note + '</span>' +
+          '</div>' +
+          '<div class="col-lg-4"><div class="d-flex justify-content-lg-end gap-2">' + buttons(t, i) + '</div></div>' +
+          '</div></div>';
+      }).join("");
+
+      document.getElementById("done-title").textContent = "Completed (" + done.length + ")";
+      document.getElementById("done-list").innerHTML = done.map(function (t) {
+        var pct = Math.round(t.attended / t.total * 100);
+        var ok = t.status === "Completed";
+        return '<div class="card"><div class="row align-items-center gy-3">' +
+          '<div class="col-lg-8">' +
+            '<div class="d-flex align-items-center flex-wrap gap-2 mb-2"><h3 class="h6 fw-bold mb-0">' + t.title + '</h3>' +
+            '<span class="tag">' + t.info + '</span><span class="tag ' + (ok ? "ok" : "bad") + '">' + t.status + '</span></div>' +
+            '<div class="d-flex justify-content-between small text-muted mb-1"><span>Attendance</span>' +
+            '<strong class="text-dark">' + t.attended + ' of ' + t.total + ' sessions (' + pct + '%)</strong></div>' +
+            '<div class="progress mb-2" style="height:6px"><div class="progress-bar" style="width:' + pct + '%;background:' + (ok ? "var(--brand)" : "#6c757d") + '"></div></div>' +
+            '<p class="small text-muted mb-0">' + t.note + '</p>' +
+          '</div>' +
+          '<div class="col-lg-4"><div class="d-flex justify-content-lg-end gap-2">' +
+            (ok ? '<a href="certificate.html" class="btn btn-primary">Download certificate</a>' +
+                  '<button class="btn btn-outline-secondary" onclick="window.print()">Print</button>'
+                : '<button class="btn btn-soft" disabled>No certificate</button>') +
+          '</div></div></div></div>';
+      }).join("");
+    }
+
+    function withdraw(i) {
+      if (confirm("Withdraw from " + active[i].title + "?")) {
+        active[i].status = "Withdrawn";
+        active[i].note = "You withdrew from this training.";
+        render();
+      }
+    }
+
+    render();
+  </script>
 </body>
 </html>
