@@ -83,12 +83,572 @@
                 </div>
             </header>
 
-            <!-- TODO: page content -->
+ 
+<!-- PAGE INTRODUCTION -->
+<section class="rooms-intro">
+
+    <div>
+        <p class="rooms-eyebrow">ADMINISTRATION</p>
+
+        <h2>Manage Rooms and Resources</h2>
+
+        <p>
+            Manage training locations, room capacity
+            and available equipment.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- ROOM STATISTICS -->
+<section class="rooms-stats">
+
+    <article class="room-stat-card">
+
+        <div class="room-stat-icon total-rooms-icon">▦</div>
+
+        <div>
+            <p>Total Rooms</p>
+            <h2>5</h2>
+        </div>
+
+    </article>
+
+
+    <article class="room-stat-card">
+
+        <div class="room-stat-icon available-icon">✓</div>
+
+        <div>
+            <p>Available</p>
+            <h2>2</h2>
+        </div>
+
+    </article>
+
+
+    <article class="room-stat-card">
+
+        <div class="room-stat-icon occupied-icon">◷</div>
+
+        <div>
+            <p>Occupied</p>
+            <h2>2</h2>
+        </div>
+
+    </article>
+
+
+    <article class="room-stat-card">
+
+        <div class="room-stat-icon maintenance-icon">!</div>
+
+        <div>
+            <p>Maintenance</p>
+            <h2>1</h2>
+        </div>
+
+    </article>
+
+</section>
+
+
+<!-- ROOM MANAGEMENT -->
+<section class="rooms-management">
+
+
+    <!-- TOOLBAR -->
+    <div class="rooms-toolbar">
+
+        <div>
+            <h2>All Rooms</h2>
+
+            <p>
+                View and manage training rooms and their resources.
+            </p>
+        </div>
+
+
+        <div class="rooms-toolbar-actions">
+
+
+            <!-- SEARCH -->
+            <form class="rooms-search" action="#" method="get">
+
+                <label for="room-search" class="visually-hidden">
+                    Search rooms
+                </label>
+
+                <input
+                    type="search"
+                    id="room-search"
+                    name="q"
+                    placeholder="Search rooms..."
+                >
+
+                <button type="submit" aria-label="Search">
+                    ⌕
+                </button>
+
+            </form>
+
+
+            <!-- ADD ROOM -->
+            <details class="add-room-dropdown">
+
+                <summary>+ Add Room</summary>
+
+                <div class="add-room-form">
+
+                    <h3>Add New Room</h3>
+
+                    <form action="#" method="get">
+
+
+                        <div class="room-form-field">
+
+                            <label for="room-name">
+                                Room Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="room-name"
+                                name="room-name"
+                                placeholder="e.g. Conference Room A"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="room-form-field">
+
+                            <label for="room-location">
+                                Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="room-location"
+                                name="location"
+                                placeholder="Building and floor"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="room-form-field">
+
+                            <label for="room-capacity">
+                                Maximum Capacity
+                            </label>
+
+                            <input
+                                type="number"
+                                id="room-capacity"
+                                name="capacity"
+                                min="1"
+                                placeholder="Number of participants"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ROOM RESOURCES -->
+                        <fieldset class="room-resources-field">
+
+                            <legend>Available Resources</legend>
+
+                            <div class="room-resource-options">
+
+                                <label>
+                                    <input type="checkbox" name="resources"
+                                           value="projector">
+                                    Projector
+                                </label>
+
+                                <label>
+                                    <input type="checkbox" name="resources"
+                                           value="computers">
+                                    Computers
+                                </label>
+
+                                <label>
+                                    <input type="checkbox" name="resources"
+                                           value="wifi">
+                                    Wi-Fi
+                                </label>
+
+                                <label>
+                                    <input type="checkbox" name="resources"
+                                           value="whiteboard">
+                                    Whiteboard
+                                </label>
+
+                                <label>
+                                    <input type="checkbox" name="resources"
+                                           value="smart-screen">
+                                    Smart Screen
+                                </label>
+
+                            </div>
+
+                        </fieldset>
+
+
+                        <div class="room-form-field">
+
+                            <label for="room-status">
+                                Room Status
+                            </label>
+
+                            <select id="room-status" name="status">
+
+                                <option value="available">Available</option>
+
+                                <option value="occupied">Occupied</option>
+
+                                <option value="maintenance">Maintenance</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="room-form-buttons">
+
+                            <button type="reset" class="room-cancel">
+                                Clear
+                            </button>
+
+                            <button type="button" class="room-save">
+                                Save Room
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+
+    <!-- ROOM STATUS FILTERS -->
+
+    <input
+        type="radio"
+        name="room-filter"
+        id="rooms-all"
+        class="room-filter-input"
+        checked
+    >
+
+    <input
+        type="radio"
+        name="room-filter"
+        id="rooms-available"
+        class="room-filter-input"
+    >
+
+    <input
+        type="radio"
+        name="room-filter"
+        id="rooms-occupied"
+        class="room-filter-input"
+    >
+
+    <input
+        type="radio"
+        name="room-filter"
+        id="rooms-maintenance"
+        class="room-filter-input"
+    >
+
+
+    <!-- FILTER NAVIGATION -->
+    <div class="rooms-filters">
+
+        <label for="rooms-all" class="room-filter">
+            All Rooms
+            <span>5</span>
+        </label>
+
+        <label for="rooms-available" class="room-filter">
+            Available
+            <span>2</span>
+        </label>
+
+        <label for="rooms-occupied" class="room-filter">
+            Occupied
+            <span>2</span>
+        </label>
+
+        <label for="rooms-maintenance" class="room-filter">
+            Maintenance
+            <span>1</span>
+        </label>
+
+    </div>
+
+
+    <!-- ROOMS TABLE -->
+    <div class="rooms-table-wrapper">
+
+        <table class="rooms-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Room</th>
+                    <th>Location</th>
+                    <th>Capacity</th>
+                    <th>Resources</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <!-- ROOM 1 -->
+                <tr data-status="available">
+
+                    <td>
+                        <strong>Computer Lab 1</strong>
+                    </td>
+
+                    <td>Building B · Floor 2</td>
+
+                    <td>30 people</td>
+
+                    <td>
+                        <div class="room-resource-tags">
+                            <span>Computers</span>
+                            <span>Projector</span>
+                            <span>Wi-Fi</span>
+                        </div>
+                    </td>
+
+                    <td>
+                        <span class="room-status available">
+                            Available
+                        </span>
+                    </td>
+
+                    <td>
+                        <div class="room-row-actions">
+
+                            <button type="button" class="room-edit">
+                                Edit
+                            </button>
+
+                            <button type="button" class="room-delete">
+                                Delete
+                            </button>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- ROOM 2 -->
+                <tr data-status="occupied">
+
+                    <td>
+                        <strong>Conference Room A</strong>
+                    </td>
+
+                    <td>Building A · Floor 1</td>
+
+                    <td>20 people</td>
+
+                    <td>
+                        <div class="room-resource-tags">
+                            <span>Projector</span>
+                            <span>Whiteboard</span>
+                            <span>Wi-Fi</span>
+                        </div>
+                    </td>
+
+                    <td>
+                        <span class="room-status occupied">
+                            Occupied
+                        </span>
+                    </td>
+
+                    <td>
+                        <div class="room-row-actions">
+
+                            <button type="button" class="room-edit">
+                                Edit
+                            </button>
+
+                            <button type="button" class="room-delete">
+                                Delete
+                            </button>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- ROOM 3 -->
+                <tr data-status="available">
+
+                    <td>
+                        <strong>Training Room B</strong>
+                    </td>
+
+                    <td>Building A · Floor 2</td>
+
+                    <td>15 people</td>
+
+                    <td>
+                        <div class="room-resource-tags">
+                            <span>Smart Screen</span>
+                            <span>Whiteboard</span>
+                        </div>
+                    </td>
+
+                    <td>
+                        <span class="room-status available">
+                            Available
+                        </span>
+                    </td>
+
+                    <td>
+                        <div class="room-row-actions">
+
+                            <button type="button" class="room-edit">
+                                Edit
+                            </button>
+
+                            <button type="button" class="room-delete">
+                                Delete
+                            </button>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- ROOM 4 -->
+                <tr data-status="occupied">
+
+                    <td>
+                        <strong>Meeting Room 1</strong>
+                    </td>
+
+                    <td>Building C · Floor 1</td>
+
+                    <td>8 people</td>
+
+                    <td>
+                        <div class="room-resource-tags">
+                            <span>Wi-Fi</span>
+                            <span>Projector</span>
+                        </div>
+                    </td>
+
+                    <td>
+                        <span class="room-status occupied">
+                            Occupied
+                        </span>
+                    </td>
+
+                    <td>
+                        <div class="room-row-actions">
+
+                            <button type="button" class="room-edit">
+                                Edit
+                            </button>
+
+                            <button type="button" class="room-delete">
+                                Delete
+                            </button>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- ROOM 5 -->
+                <tr data-status="maintenance">
+
+                    <td>
+                        <strong>Computer Lab 2</strong>
+                    </td>
+
+                    <td>Building B · Floor 2</td>
+
+                    <td>25 people</td>
+
+                    <td>
+                        <div class="room-resource-tags">
+                            <span>Computers</span>
+                            <span>Projector</span>
+                        </div>
+                    </td>
+
+                    <td>
+                        <span class="room-status maintenance">
+                            Maintenance
+                        </span>
+                    </td>
+
+                    <td>
+                        <div class="room-row-actions">
+
+                            <button type="button" class="room-edit">
+                                Edit
+                            </button>
+
+                            <button type="button" class="room-delete">
+                                Delete
+                            </button>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- TABLE FOOTER -->
+    <div class="rooms-table-footer">
+
+        <p>Showing 5 sample rooms</p>
+
+    </div>
+
+</section>
+
 
         </main>
 
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
