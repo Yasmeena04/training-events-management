@@ -7,20 +7,41 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body data-role="participant" data-page="my-trainings">
+<body>
 
   <!-- Owner: Shora | Module 5: Payments (participant) -->
-  <div id="site-header"></div>
+  <header class="app-header text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="../index.html" class="text-decoration-none">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+      </a>
+      <nav class="app-nav d-none d-md-flex align-items-center gap-4">
+        <a href="trainings.html">Discover</a>
+        <a href="my-trainings.html" class="active">My trainings</a>
+        <a href="certificate.html">Certificates</a>
+      </nav>
+      <div class="d-flex align-items-center gap-3">
+        <select class="form-select role-select" aria-label="Role">
+          <option value="participant" selected>Participant</option>
+          <option value="trainer">Trainer</option>
+          <option value="manager">Manager</option>
+        </select>
+        <a href="#" class="bell-btn" aria-label="Notifications">🔔<span class="dot"></span></a>
+        <div class="user-pill">
+          <div class="user-avatar" id="user-initials">SW</div>
+          <span id="user-name">Shora Waeil</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <main class="container">
+  <main class="container py-4">
     <div class="page-head">
       <h1>Complete your payment</h1>
       <p class="muted">Demo only: payments are verified automatically and no real charge is made.</p>
     </div>
 
     <div class="layout-2">
-
-      <!-- Card form -->
       <div class="card">
         <h2 class="mb-3">Payment method</h2>
         <form id="payment-form" novalidate>
@@ -50,7 +71,6 @@
         </form>
       </div>
 
-      <!-- Summary -->
       <div class="card side">
         <h3 class="mb-3">Order summary</h3>
         <span class="tag mb-2" id="s-type"></span>
@@ -66,11 +86,65 @@
           <strong class="h4 mb-0" id="s-price"></strong>
         </div>
       </div>
-
     </div>
   </main>
 
-  <div id="site-footer"></div>
+  <footer class="app-footer py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="d-flex align-items-center gap-3">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+        <div class="footer-sub">Training Events Management System</div>
+      </div>
+      <p class="footer-tagline mb-0">A single place to discover, manage and complete training.</p>
+    </div>
+  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script
+  <script>
+    // Header user pill
+    var userName = localStorage.getItem("userName") || "Shora Waeil";
+    document.getElementById("user-name").textContent = userName;
+    document.getElementById("user-initials").textContent = userName.trim().split(/\s+/).slice(0, 2)
+      .map(function (w) { return w.charAt(0).toUpperCase(); }).join("");
+    document.getElementById("card-name").value = userName;
+
+    var trainings = {
+      "web-dev":   { title: "Web Development Fundamentals", price: "150 LYD", trainer: "Code Academy", type: "Course",   duration: "4 weeks", sessions: "8 sessions" },
+      "int-to-ai": { title: "Machine Learning Bootcamp",    price: "200 LYD", trainer: "Data Lab",     type: "Course",   duration: "2 weeks", sessions: "10 sessions" },
+      "ui-ux":     { title: "UI/UX Design Basics",          price: "50 LYD",  trainer: "Omar K.",      type: "Workshop", duration: "3 days",  sessions: "3 sessions" }
+    };
+
+    var t = trainings[new URLSearchParams(location.search).get("id")] || trainings["web-dev"];
+    document.getElementById("s-title").textContent    = t.title;
+    document.getElementById("s-trainer").textContent  = "By " + t.trainer;
+    document.getElementById("s-type").textContent     = t.type;
+    document.getElementById("s-duration").textContent = t.duration;
+    document.getElementById("s-sessions").textContent = t.sessions;
+    document.getElementById("s-price").textContent    = t.price;
+    document.getElementById("pay-btn").textContent    = "Pay " + t.price;
+
+    document.getElementById("payment-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var msg = document.getElementById("message");
+      var number = document.getElementById("card-number").value.replace(/\s/g, "");
+      var expiry = document.getElementById("card-expiry").value;
+      var cvv = document.getElementById("card-cvv").value;
+
+      if (!document.getElementById("card-name").value.trim() ||
+          !/^\d{16}$/.test(number) || !/^\d{2}\/\d{2}$/.test(expiry) || !/^\d{3,4}$/.test(cvv)) {
+        msg.className = "small mt-2 text-danger";
+        msg.textContent = "Please check your card details.";
+        return;
+      }
+
+      var btn = document.getElementById("pay-btn");
+      btn.disabled = true;
+      btn.textContent = "Verifying...";
+      setTimeout(function () {
+        msg.className = "small mt-2 text-success";
+        msg.textContent = "Payment verified. Your seat is confirmed.";
+        setTimeout(function () { location.href = "my-trainings.html"; }, 1200);
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
