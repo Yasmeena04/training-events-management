@@ -3,20 +3,435 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Training details | Training Events</title>
+  <title id="page-title">Training Details | Training Events</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-  <!-- Owner: Shora | Module 4 -->
-  <div id="site-header"></div>
 
+  <!-- Owner: Shora | Module 4 -->
+  <!-- Header -->
+  <header class="app-header text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="text-decoration-none">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+      </a>
+      <nav class="app-nav d-none d-md-flex align-items-center gap-4">
+        <a href="trainings.html" class="active">Discover</a>
+        <a href="my-trainings.html">My trainings</a>
+        <a href="certificate.html">Certificates</a>
+      </nav>
+      <div class="d-flex align-items-center gap-3">
+        <select class="form-select role-select" aria-label="Role">
+          <option value="participant">Participant</option>
+          <option value="trainer">Trainer</option>
+          <option value="manager">Manager</option>
+        </select>
+        <a href="#" class="bell-btn" aria-label="Notifications">🔔<span class="dot"></span></a>
+        <div class="user-pill">
+          <div class="user-avatar" id="user-initials">G2</div>
+          <span id="user-name">Group 2</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container mt-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="trainings.html" class="text-decoration-none text-muted">Trainings</a></li>
+        <li class="breadcrumb-item active text-dark fw-semibold" id="breadcrumb-title" aria-current="page">Training Details</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Main Content Layout -->
   <main class="container py-4">
-    <h1>Training details</h1>
-    <!-- TODO: page content -->
+    <div class="row g-4">
+      
+      <!-- Main Details Column -->
+      <div class="col-lg-8">
+        
+        <!-- Course Banner Image -->
+        <div class="ratio ratio-21x9 rounded-4 overflow-hidden shadow-sm mb-4 bg-light">
+          <img id="detail-img" src="../assets/img/web-dev.jpg" alt="Training Banner" class="w-100 h-100 object-fit-cover">
+        </div>
+
+        <!-- Tags / Badges -->
+        <div class="d-flex gap-2 mb-3" id="detail-tags">
+          <span class="tag">Course</span>
+        </div>
+
+        <!-- Title and Host -->
+        <h1 class="fw-extrabold mb-2" id="detail-title">Loading Training...</h1>
+        <p class="text-muted mb-4" id="detail-host">By <strong>Organization</strong></p>
+
+        <!-- About Section -->
+        <h2 class="h5 fw-bold mb-3">About this training</h2>
+        <p class="text-muted leading-relaxed mb-4" id="detail-description">
+          Please wait while we load the course details.
+        </p>
+
+        <!-- Sessions Table Section -->
+        <h2 class="h5 fw-bold mb-3" id="detail-sessions-title">Sessions</h2>
+        <div class="table-wrap mb-4">
+          <table class="table table-hover mb-0 align-middle">
+            <thead>
+              <tr>
+                <th scope="col">Session</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+                <th scope="col">Room</th>
+              </tr>
+            </thead>
+            <tbody id="detail-sessions-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+          <div class="p-3 bg-light text-muted small border-top" id="detail-sessions-footer">
+            Schedule details
+          </div>
+        </div>
+
+        <!-- Who Can Apply Section -->
+        <h2 class="h5 fw-bold mb-3">Who can apply</h2>
+        <ul class="text-muted mb-4 ps-3" id="detail-requirements">
+          <li>General prerequisites</li>
+        </ul>
+
+        <!-- Certificate Box -->
+        <div class="card dashed p-4 border-2 rounded-4">
+          <h3 class="h6 fw-bold mb-1">Certificate of completion</h3>
+          <p class="text-muted small mb-0" id="detail-cert-text">
+            Issued to participants upon successful completion.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Sidebar Action Card -->
+      <div class="col-lg-4">
+        <div class="card side p-4 rounded-4 sticky-top" style="top: 2rem;">
+          
+          <div class="d-flex align-items-baseline justify-content-between mb-3">
+            <h2 class="fw-extrabold display-6 mb-0" id="sidebar-price">0 LYD</h2>
+          </div>
+
+          <div class="d-flex justify-content-between text-muted small fw-semibold mb-1">
+            <span>Seats left</span>
+            <span id="sidebar-seats-count">0 of 0</span>
+          </div>
+
+          <div class="bar mb-4">
+            <span id="sidebar-seats-bar" style="width: 50%;"></span>
+          </div>
+
+          <dl class="kv border-top pt-3">
+            <dt>Dates</dt>
+            <dd id="sidebar-dates">-</dd>
+
+            <dt>Duration</dt>
+            <dd id="sidebar-duration">-</dd>
+
+            <dt>Review</dt>
+            <dd id="sidebar-review">-</dd>
+
+            <dt>Apply by</dt>
+            <dd id="sidebar-apply-by">-</dd>
+          </dl>
+
+          <a href="apply.html" id="apply-btn" class="btn btn-custom-purple w-100 py-2 fw-bold mt-2">Apply now</a>
+
+          <p class="text-muted xsmall text-center mt-3 mb-0">
+            You pay only after the trainer accepts your application. Payment is confirmed automatically.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
   </main>
 
-  <div id="site-footer"></div>
+  <!-- Footer -->
+  <footer class="app-footer py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="d-flex align-items-center gap-3">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+        <div class="footer-sub">Training Events Management System</div>
+      </div>
+      <p class="footer-tagline mb-0">A single place to discover, manage and complete training.</p>
+    </div>
+  </footer>
+
+  <!-- Dynamic Content JavaScript -->
+  <script>
+    // Header User Profile
+    (function () {
+      var name = localStorage.getItem("userName") || "Group 2";
+      var initials = name.trim().split(/\s+/).slice(0, 2)
+        .map(function (w) { return w.charAt(0).toUpperCase(); }).join("");
+      document.getElementById("user-name").textContent = name;
+      document.getElementById("user-initials").textContent = initials;
+    })();
+
+    // Database of all 9 courses
+    const coursesData = {
+      'data-analytics': {
+        title: 'Intro to Data Analysis',
+        image: '../assets/img/data-analytics.jpg',
+        tags: ['Workshop', 'Data', 'Free'],
+        host: 'By Data Guild · organization with 2 trainers',
+        description: 'Learn the fundamentals of data analysis and start building data-driven solutions using modern tabular analytics techniques and visual workflows.',
+        price: 'Free',
+        seatsLeft: '8 of 20',
+        seatsPercent: '60%',
+        dates: '12 Nov – 19 Nov',
+        duration: '1 week · 3 sessions',
+        review: 'Instant enrollment',
+        applyBy: '10 Nov',
+        sessionsTitle: 'Sessions (3)',
+        sessions: [
+          { num: 1, date: 'Thu 12 Nov', time: '10:00 – 12:00', room: 'Lab 3' },
+          { num: 2, date: 'Sat 14 Nov', time: '10:00 – 12:00', room: 'Lab 3' },
+          { num: 3, date: 'Tue 17 Nov', time: '10:00 – 12:00', room: 'Lab 3' }
+        ],
+        sessionsFooter: 'All sessions listed above',
+        requirements: ['Basic spreadsheet familiarity', 'Personal laptop'],
+        certText: 'Issued to participants who attend at least 100% of sessions.'
+      },
+      'web-dev': {
+        title: 'Web Development Fundamentals',
+        image: '../assets/img/web-dev.jpg',
+        tags: ['Course', 'Programming', 'Paid'],
+        host: 'By Code Academy · organization with 3 trainers',
+        description: 'A four-week course on building websites with HTML, CSS and JavaScript. Each session mixes a short lesson with hands-on practice, and the course ends with a small project.',
+        price: '150 LYD',
+        seatsLeft: '6 of 25',
+        seatsPercent: '76%',
+        dates: '17 Nov – 10 Dec',
+        duration: '4 weeks · 8 sessions',
+        review: 'Trainer reviews applications',
+        applyBy: '15 Nov',
+        sessionsTitle: 'Sessions (8)',
+        sessions: [
+          { num: 1, date: 'Tue 17 Nov', time: '9:00 – 12:00', room: 'Lab 1' },
+          { num: 2, date: 'Thu 19 Nov', time: '9:00 – 12:00', room: 'Lab 1' },
+          { num: 3, date: 'Tue 24 Nov', time: '9:00 – 12:00', room: 'Lab 1' },
+          { num: 4, date: 'Thu 26 Nov', time: '9:00 – 12:00', room: 'Lab 1' }
+        ],
+        sessionsFooter: '+ 4 more sessions until 10 Dec',
+        requirements: ['University students or recent graduates', 'Basic computer skills', 'A short note on why you want to join'],
+        certText: 'Issued to participants who attend at least 80% of the sessions (7 of 8).'
+      },
+      'cybersecurity': {
+        title: 'Summer Internship: Software Engineering',
+        image: '../assets/img/cybersecurity.jpg',
+        tags: ['Internship', 'Engineering', 'Free'],
+        host: 'By Tech Lab · organization with 5 trainers',
+        description: 'Hands-on software development experience with live projects and mentorship from engineering leaders.',
+        price: 'Free',
+        seatsLeft: '3 of 10',
+        seatsPercent: '70%',
+        dates: '1 Dec – 30 Dec',
+        duration: '4 weeks · Daily',
+        review: 'Interview evaluation required',
+        applyBy: '25 Nov',
+        sessionsTitle: 'Sessions (20)',
+        sessions: [
+          { num: 1, date: 'Tue 1 Dec', time: '9:00 – 15:00', room: 'Hub A' },
+          { num: 2, date: 'Wed 2 Dec', time: '9:00 – 15:00', room: 'Hub A' },
+          { num: 3, date: 'Thu 3 Dec', time: '9:00 – 15:00', room: 'Hub A' }
+        ],
+        sessionsFooter: '+ 17 more sessions until 30 Dec',
+        requirements: ['Final year IT/CS students', 'Git & OOP Knowledge'],
+        certText: 'Issued upon successful project delivery defense.'
+      },
+      'ui-ux': {
+        title: 'UI/UX Design Basics',
+        image: '../assets/img/ui-ux.jpg',
+        tags: ['Workshop', 'Creative', 'Paid'],
+        host: 'By Design Studio · organization with 2 trainers',
+        description: 'Discover user experience principles, wireframing, interactive prototyping, and modern desktop UI design techniques.',
+        price: '100 LYD',
+        seatsLeft: '12 of 20',
+        seatsPercent: '40%',
+        dates: '20 Nov – 27 Nov',
+        duration: '1 week · 4 sessions',
+        review: 'Trainer reviews applications',
+        applyBy: '18 Nov',
+        sessionsTitle: 'Sessions (4)',
+        sessions: [
+          { num: 1, date: 'Fri 20 Nov', time: '14:00 – 17:00', room: 'Studio 2' },
+          { num: 2, date: 'Sat 21 Nov', time: '14:00 – 17:00', room: 'Studio 2' }
+        ],
+        sessionsFooter: '+ 2 more sessions until 27 Nov',
+        requirements: ['Interest in Visual Design', 'Figma account created'],
+        certText: 'Issued to participants who complete final portfolio prototype.'
+      },
+      'int-to-ai': {
+        title: 'Machine Learning Bootcamp',
+        image: '../assets/img/int-to-ai.jpg',
+        tags: ['Course', 'Technology', 'Paid'],
+        host: 'By AI Initiative · organization with 4 trainers',
+        description: 'Practical machine learning modeling, algorithms, regression, classification, and real-world Python deployment.',
+        price: '200 LYD',
+        seatsLeft: '10 of 30',
+        seatsPercent: '66%',
+        dates: '25 Nov – 20 Dec',
+        duration: '4 weeks · 10 sessions',
+        review: 'Trainer reviews applications',
+        applyBy: '22 Nov',
+        sessionsTitle: 'Sessions (10)',
+        sessions: [
+          { num: 1, date: 'Wed 25 Nov', time: '16:00 – 19:00', room: 'Lab 4' },
+          { num: 2, date: 'Fri 27 Nov', time: '16:00 – 19:00', room: 'Lab 4' }
+        ],
+        sessionsFooter: '+ 8 more sessions until 20 Dec',
+        requirements: ['Python programming basics', 'Linear algebra fundamentals'],
+        certText: 'Issued to participants who complete capstone project.'
+      },
+      'pub': {
+        title: 'Public Speaking Skills',
+        image: '../assets/img/pub.jpg',
+        tags: ['Workshop', 'Professional', 'Free'],
+        host: 'By Leadership Center · organization with 1 trainer',
+        description: 'Master presentation structure, vocal presence, body language, and effective audience engagement strategies.',
+        price: 'Free',
+        seatsLeft: '15 of 25',
+        seatsPercent: '40%',
+        dates: '28 Nov – 29 Nov',
+        duration: '2 days · 2 sessions',
+        review: 'Instant enrollment',
+        applyBy: '26 Nov',
+        sessionsTitle: 'Sessions (2)',
+        sessions: [
+          { num: 1, date: 'Sat 28 Nov', time: '11:00 – 14:00', room: 'Auditorium' },
+          { num: 2, date: 'Sun 29 Nov', time: '11:00 – 14:00', room: 'Auditorium' }
+        ],
+        sessionsFooter: 'All sessions listed above',
+        requirements: ['Open to all students and professionals'],
+        certText: 'Issued upon attendance of both sessions.'
+      },
+      'jss': {
+        title: 'Advanced JavaScript',
+        image: '../assets/img/jss.jpg',
+        tags: ['Course', 'Programming', 'Paid'],
+        host: 'By Code Academy · organization with 2 trainers',
+        description: 'Deep dive into asynchronous execution, closures, OOP patterns, state management, and modern ES6+ JS frameworks.',
+        price: '180 LYD',
+        seatsLeft: '4 of 15',
+        seatsPercent: '73%',
+        dates: '2 Dec – 23 Dec',
+        duration: '3 weeks · 6 sessions',
+        review: 'Trainer reviews applications',
+        applyBy: '30 Nov',
+        sessionsTitle: 'Sessions (6)',
+        sessions: [
+          { num: 1, date: 'Wed 2 Dec', time: '17:00 – 20:00', room: 'Lab 2' },
+          { num: 2, date: 'Sat 5 Dec', time: '17:00 – 20:00', room: 'Lab 2' }
+        ],
+        sessionsFooter: '+ 4 more sessions until 23 Dec',
+        requirements: ['Basic JavaScript knowledge', 'HTML/CSS experience'],
+        certText: 'Issued to participants who score 80%+ in code review.'
+      },
+      'graphic': {
+        title: 'Graphic Design Essentials',
+        image: '../assets/img/graphic.jpg',
+        tags: ['Workshop', 'Creative', 'Free'],
+        host: 'By Creative Hub · organization with 2 trainers',
+        description: 'Learn fundamental layout techniques, typography rules, color theory, and digital vector asset production.',
+        price: 'Free',
+        seatsLeft: '7 of 20',
+        seatsPercent: '65%',
+        dates: '5 Dec – 12 Dec',
+        duration: '1 week · 3 sessions',
+        review: 'Instant enrollment',
+        applyBy: '3 Dec',
+        sessionsTitle: 'Sessions (3)',
+        sessions: [
+          { num: 1, date: 'Sat 5 Dec', time: '10:00 – 13:00', room: 'Studio 1' },
+          { num: 2, date: 'Tue 8 Dec', time: '10:00 – 13:00', room: 'Studio 1' }
+        ],
+        sessionsFooter: '+ 1 more session on 12 Dec',
+        requirements: ['Design interest', 'Canva or Illustrator installed'],
+        certText: 'Issued upon submitting final poster graphic design.'
+      },
+      'project-management': {
+        title: 'Project Management',
+        image: '../assets/img/project-management.jpg',
+        tags: ['Course', 'Professional', 'Paid'],
+        host: 'By Management Institute · organization with 3 trainers',
+        description: 'Learn how to effectively plan, schedule, mitigate risks, manage stakeholders, and deliver projects on time and within budget.',
+        price: '160 LYD',
+        seatsLeft: '9 of 25',
+        seatsPercent: '64%',
+        dates: '26 Nov – 17 Dec',
+        duration: '3 weeks · 6 sessions',
+        review: 'Trainer reviews applications',
+        applyBy: '24 Nov',
+        sessionsTitle: 'Sessions (6)',
+        sessions: [
+          { num: 1, date: 'Thu 26 Nov', time: '15:00 – 18:00', room: 'Hall B' },
+          { num: 2, date: 'Sun 29 Nov', time: '15:00 – 18:00', room: 'Hall B' }
+        ],
+        sessionsFooter: '+ 4 more sessions until 17 Dec',
+        requirements: ['Interest in management roles', 'Teamwork aptitude'],
+        certText: 'Issued to participants attending at least 5 of 6 sessions.'
+      }
+    };
+
+    // Load data dynamically based on localStorage or URL parameter
+    (function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const courseId = urlParams.get('id') || localStorage.getItem('selectedCourse') || 'web-dev';
+      const course = coursesData[courseId] || coursesData['web-dev'];
+
+      // Populate DOM elements
+      document.getElementById('page-title').textContent = `${course.title} | Training Events`;
+      document.getElementById('breadcrumb-title').textContent = course.title;
+      document.getElementById('detail-img').src = course.image;
+      document.getElementById('detail-title').textContent = course.title;
+      document.getElementById('detail-host').innerHTML = course.host;
+      document.getElementById('detail-description').textContent = course.description;
+      
+      // Render Tags
+      const tagsContainer = document.getElementById('detail-tags');
+      tagsContainer.innerHTML = course.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+
+      // Render Sessions
+      document.getElementById('detail-sessions-title').textContent = course.sessionsTitle;
+      const sessionsBody = document.getElementById('detail-sessions-body');
+      sessionsBody.innerHTML = course.sessions.map(s => `
+        <tr>
+          <td>${s.num}</td>
+          <td>${s.date}</td>
+          <td>${s.time}</td>
+          <td>${s.room}</td>
+        </tr>
+      `).join('');
+      document.getElementById('detail-sessions-footer').textContent = course.sessionsFooter;
+
+      // Render Requirements
+      const reqList = document.getElementById('detail-requirements');
+      reqList.innerHTML = course.requirements.map(req => `<li>${req}</li>`).join('');
+
+      // Certificate Text
+      document.getElementById('detail-cert-text').innerHTML = course.certText;
+
+      // Sidebar Data
+      document.getElementById('sidebar-price').textContent = course.price;
+      document.getElementById('sidebar-seats-count').textContent = course.seatsLeft;
+      document.getElementById('sidebar-seats-bar').style.width = course.seatsPercent;
+      document.getElementById('sidebar-dates').textContent = course.dates;
+      document.getElementById('sidebar-duration').textContent = course.duration;
+      document.getElementById('sidebar-review').textContent = course.review;
+      document.getElementById('sidebar-apply-by').textContent = course.applyBy;
+
+      // Apply button destination
+      document.getElementById('apply-btn').href = `apply.html?id=${courseId}`;
+    })();
+  </script>
 
 </body>
 </html>
