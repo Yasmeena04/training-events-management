@@ -3,25 +3,312 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apply for a training | Training Events</title>
+  <title id="page-title">Apply for Training | Training Events</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+
   <!-- Owner: Shora | Module 4 -->
-  <div id="site-header"></div>
+  <!-- Header -->
+  <header class="app-header text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="text-decoration-none">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+      </a>
+      <nav class="app-nav d-none d-md-flex align-items-center gap-4">
+        <a href="trainings.html" class="active">Discover</a>
+        <a href="my-trainings.html">My trainings</a>
+        <a href="certificate.html">Certificates</a>
+      </nav>
+      <div class="d-flex align-items-center gap-3">
+        <select class="form-select role-select" aria-label="Role">
+          <option value="participant">Participant</option>
+          <option value="trainer">Trainer</option>
+          <option value="manager">Manager</option>
+        </select>
+        <a href="#" class="bell-btn" aria-label="Notifications">🔔<span class="dot"></span></a>
+        <div class="user-pill">
+          <div class="user-avatar" id="user-initials">G2</div>
+          <span id="user-name">Group 2</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
+  <!-- Breadcrumb Navigation -->
+  <div class="container mt-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="trainings.html" class="text-decoration-none text-muted">Trainings</a></li>
+        <li class="breadcrumb-item"><a href="#" id="breadcrumb-course-link" class="text-decoration-none text-muted">Training Details</a></li>
+        <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">Apply</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Main Application Form Layout -->
   <main class="container py-4">
-    <h1>Apply for a training</h1>
+    <div class="row g-4">
+      
+      <!-- Application Form Column (Left / Main) -->
+      <div class="col-lg-8">
+        <div class="card p-4 rounded-4 shadow-sm border-0 mb-4">
+          <h1 class="h3 fw-bold mb-1">Training Application</h1>
+          <p class="text-muted small mb-4">Complete the required details to submit your application for review.</p>
 
+          <form id="application-form">
+            
+            <!-- 1. Basic Information -->
+            <fieldset class="section">
+              <legend>1. Basic Information</legend>
+              
+              <div class="field mb-3">
+                <label for="applicant-name" class="lbl">Full Name</label>
+                <input type="text" id="applicant-name" class="form-control" required placeholder="Enter your full name">
+              </div>
 
+              <div class="field mb-3">
+                <label for="applicant-email" class="lbl">Email Address</label>
+                <input type="email" id="applicant-email" class="form-control" required placeholder="name@example.com">
+              </div>
 
-    
+              <div class="field mb-3">
+                <label for="applicant-phone" class="lbl">Phone Number</label>
+                <input type="tel" id="applicant-phone" class="form-control" required placeholder="+218 9X XXX XXXX">
+              </div>
+            </fieldset>
+
+            <!-- 2. Statement of Purpose -->
+            <fieldset class="section">
+              <legend>2. Statement of Purpose</legend>
+              
+              <div class="field mb-3">
+                <label for="applicant-note" class="lbl">Why do you want to join this training?</label>
+                <textarea id="applicant-note" class="form-control" rows="4" required placeholder="Briefly describe your interest and background experience..."></textarea>
+              </div>
+            </fieldset>
+
+            <!-- Action Buttons -->
+            <div class="d-flex justify-content-end gap-3 mt-4">
+              <a href="trainings.html" class="btn btn-light text-muted">Cancel</a>
+              <button type="submit" class="btn btn-custom-purple px-4 py-2">Submit Application</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- Selected Training Summary Sidebar (Right) -->
+      <div class="col-lg-4">
+        <div class="card side p-4 rounded-4 sticky-top" style="top: 2rem;">
+          <span class="eyebrow mb-1">Applying For</span>
+          <h2 class="h5 fw-bold mb-2" id="summary-title">Loading Training...</h2>
+          <p class="text-muted small mb-3" id="summary-host">By Organization</p>
+          
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-3 bg-light">
+            <img id="summary-img" src="../assets/img/web-dev.jpg" alt="Selected Training" class="w-100 h-100 object-fit-cover">
+          </div>
+
+          <dl class="kv border-top pt-3 mb-0">
+            <dt>Price</dt>
+            <dd id="summary-price" class="fw-bold text-dark">-</dd>
+
+            <dt>Dates</dt>
+            <dd id="summary-dates">-</dd>
+
+            <dt>Duration</dt>
+            <dd id="summary-duration">-</dd>
+          </dl>
+        </div>
+      </div>
+
+    </div>
   </main>
 
-  <div id="site-footer"></div>
+  <!-- Login / Register Modal Simulation -->
+  <div class="modal fade" id="authModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4 shadow-lg p-3">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold" id="authModalLabel">Sign in to Apply</h5>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted small mb-4">You need to sign in or register with Levent before submitting an application.</p>
+          
+          <form id="simulated-auth-form">
+            <div class="field mb-3">
+              <label for="auth-name" class="lbl">Your Name / Username</label>
+              <input type="text" id="auth-name" class="form-control" required placeholder="e.g. Shora Kawafi">
+            </div>
+            <div class="field mb-4">
+              <label for="auth-email" class="lbl">Email Address</label>
+              <input type="email" id="auth-email" class="form-control" required placeholder="name@example.com">
+            </div>
+            <button type="submit" class="btn btn-custom-purple w-100 py-2 fw-bold">Sign In & Continue</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Footer -->
+  <footer class="app-footer py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="d-flex align-items-center gap-3">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+        <div class="footer-sub">Training Events Management System</div>
+      </div>
+      <p class="footer-tagline mb-0">A single place to discover, manage and complete training.</p>
+    </div>
+  </footer>
 
+  <!-- Bootstrap JS (Required for Modals) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Dynamic Application Script -->
+  <script>
+    // Fill Header User Info
+    (function () {
+      var name = localStorage.getItem("userName") || "Group 2";
+      var initials = name.trim().split(/\s+/).slice(0, 2)
+        .map(function (w) { return w.charAt(0).toUpperCase(); }).join("");
+      document.getElementById("user-name").textContent = name;
+      document.getElementById("user-initials").textContent = initials;
+    })();
+
+    // Check authentication status on page load
+    document.addEventListener("DOMContentLoaded", function () {
+      const loggedInUser = localStorage.getItem("userName");
+
+      if (!loggedInUser || loggedInUser === "Group 2") {
+        const authModal = new bootstrap.Modal(document.getElementById('authModal'));
+        authModal.show();
+      } else {
+        document.getElementById('applicant-name').value = loggedInUser;
+      }
+    });
+
+    // Handle simulated login form submission
+    document.getElementById('simulated-auth-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('auth-name').value.trim();
+      
+      if (nameInput) {
+        localStorage.setItem("userName", nameInput);
+        document.getElementById("user-name").textContent = nameInput;
+        var initials = nameInput.split(/\s+/).slice(0, 2).map(w => w.charAt(0).toUpperCase()).join("");
+        document.getElementById("user-initials").textContent = initials;
+        document.getElementById('applicant-name').value = nameInput;
+
+        const modalElement = document.getElementById('authModal');
+        const modalInstance = bootstrap.Modal.getInstance(modalElement);
+        modalInstance.hide();
+      }
+    });
+
+    // Course dataset mapping
+    const coursesData = {
+      'data-analytics': {
+        title: 'Intro to Data Analysis',
+        image: '../assets/img/data-analytics.jpg',
+        host: 'By Data Guild',
+        price: 'Free',
+        dates: '12 Nov – 19 Nov',
+        duration: '1 week · 3 sessions'
+      },
+      'web-dev': {
+        title: 'Web Development Fundamentals',
+        image: '../assets/img/web-dev.jpg',
+        host: 'By Code Academy',
+        price: '150 LYD',
+        dates: '17 Nov – 10 Dec',
+        duration: '4 weeks · 8 sessions'
+      },
+      'cybersecurity': {
+        title: 'Summer Internship: Software Engineering',
+        image: '../assets/img/cybersecurity.jpg',
+        host: 'By Tech Lab',
+        price: 'Free',
+        dates: '1 Dec – 30 Dec',
+        duration: '4 weeks · Daily'
+      },
+      'ui-ux': {
+        title: 'UI/UX Design Basics',
+        image: '../assets/img/ui-ux.jpg',
+        host: 'By Design Studio',
+        price: '100 LYD',
+        dates: '20 Nov – 27 Nov',
+        duration: '1 week · 4 sessions'
+      },
+      'int-to-ai': {
+        title: 'Machine Learning Bootcamp',
+        image: '../assets/img/int-to-ai.jpg',
+        host: 'By AI Initiative',
+        price: '200 LYD',
+        dates: '25 Nov – 20 Dec',
+        duration: '4 weeks · 10 sessions'
+      },
+      'pub': {
+        title: 'Public Speaking Skills',
+        image: '../assets/img/pub.jpg',
+        host: 'By Leadership Center',
+        price: 'Free',
+        dates: '28 Nov – 29 Nov',
+        duration: '2 days · 2 sessions'
+      },
+      'jss': {
+        title: 'Advanced JavaScript',
+        image: '../assets/img/jss.jpg',
+        host: 'By Code Academy',
+        price: '180 LYD',
+        dates: '2 Dec – 23 Dec',
+        duration: '3 weeks · 6 sessions'
+      },
+      'graphic': {
+        title: 'Graphic Design Essentials',
+        image: '../assets/img/graphic.jpg',
+        host: 'By Creative Hub',
+        price: 'Free',
+        dates: '5 Dec – 12 Dec',
+        duration: '1 week · 3 sessions'
+      },
+      'project-management': {
+        title: 'Project Management',
+        image: '../assets/img/project-management.jpg',
+        host: 'By Management Institute',
+        price: '160 LYD',
+        dates: '26 Nov – 17 Dec',
+        duration: '3 weeks · 6 sessions'
+      }
+    };
+
+    // Load course data into the form sidebar
+    (function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const courseId = urlParams.get('id') || localStorage.getItem('selectedCourse') || 'web-dev';
+      const course = coursesData[courseId] || coursesData['web-dev'];
+
+      document.getElementById('page-title').textContent = `Apply for ${course.title} | Training Events`;
+      document.getElementById('summary-title').textContent = course.title;
+      document.getElementById('summary-host').textContent = course.host;
+      document.getElementById('summary-img').src = course.image;
+      document.getElementById('summary-price').textContent = course.price;
+      document.getElementById('summary-dates').textContent = course.dates;
+      document.getElementById('summary-duration').textContent = course.duration;
+
+      const courseLink = document.getElementById('breadcrumb-course-link');
+      courseLink.textContent = course.title;
+      courseLink.href = `training-details.html?id=${courseId}`;
+    })();
+
+    // Simulation Form Submit
+    document.getElementById('application-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Application submitted successfully!');
+      window.location.href = 'my-trainings.html';
+    });
+  </script>
 
 </body>
 </html>
