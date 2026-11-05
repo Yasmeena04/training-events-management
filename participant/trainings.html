@@ -137,11 +137,11 @@
         <!-- Cards grid -->
         <div id="results" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-          <!-- Card 1 (Page 1) -->
+          <!-- Card 1: Intro to Data Analysis -->
           <div class="col" data-type="workshop" data-price="free" data-category="technology" data-page="1">
             <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-placeholder">
-                <span>Illustration Placeholder</span>
+              <div class="ratio ratio-16x9 card-img-container">
+                <img src="../assets/img/data-analytics.jpg" alt="Intro to Data Analysis">
               </div>
               <div class="card-body d-flex flex-column p-4">
                 <div class="mb-2">
@@ -149,25 +149,21 @@
                 </div>
                 <h3 class="h6 fw-bold mb-2">Intro to Data Analysis</h3>
                 <p class="small text-muted mb-3">Learn the fundamentals of data analysis and start building data-driven solutions.</p>
-                <div class="small text-muted mb-1">
-                  🕒 12 November 2026
-                </div>
-                <div class="small seats-text mb-4">
-                  8 seats left
-                </div>
+                <div class="small text-muted mb-1">🕒 12 November 2026</div>
+                <div class="small seats-text mb-4">8 seats left</div>
                 <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                  <a href="training-details.html" class="details-link">Details</a>
+                  <a href="training-details.html" onclick="localStorage.setItem('selectedCourse', 'data-analytics')" class="details-link">Details</a>
                   <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 2 (Page 1) -->
+          <!-- Card 2: Web Development Fundamentals -->
           <div class="col" data-type="course" data-price="paid" data-category="technology" data-page="1">
             <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-placeholder">
-                <span>Illustration Placeholder</span>
+              <div class="ratio ratio-16x9 card-img-container">
+                <img src="../assets/img/web-dev.jpg" alt="Web Development Fundamentals">
               </div>
               <div class="card-body d-flex flex-column p-4">
                 <div class="mb-2">
@@ -175,25 +171,21 @@
                 </div>
                 <h3 class="h6 fw-bold mb-2">Web Development Fundamentals</h3>
                 <p class="small text-muted mb-3">A four-week course on building websites with HTML, CSS and JavaScript.</p>
-                <div class="small text-muted mb-1">
-                  🕒 17 November 2026
-                </div>
-                <div class="small seats-text mb-4">
-                  6 seats left
-                </div>
+                <div class="small text-muted mb-1">🕒 17 November 2026</div>
+                <div class="small seats-text mb-4">6 seats left</div>
                 <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                  <a href="training-details.html" class="details-link">Details</a>
+                  <a href="training-details.html" onclick="localStorage.setItem('selectedCourse', 'web-dev')" class="details-link">Details</a>
                   <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 3 (Page 1) -->
+          <!-- Card 3: Summer Internship: Software Engineering -->
           <div class="col" data-type="internship" data-price="free" data-category="technology" data-page="1">
             <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-placeholder">
-                <span>Illustration Placeholder</span>
+              <div class="ratio ratio-16x9 card-img-container">
+                <img src="../assets/img/cybersecurity.jpg" alt="Summer Internship: Software Engineering">
               </div>
               <div class="card-body d-flex flex-column p-4">
                 <div class="mb-2">
@@ -201,25 +193,21 @@
                 </div>
                 <h3 class="h6 fw-bold mb-2">Summer Internship: Software Engineering</h3>
                 <p class="small text-muted mb-3">Hands-on software development experience with live projects and mentorship.</p>
-                <div class="small text-muted mb-1">
-                  🕒 1 December 2026
-                </div>
-                <div class="small seats-text mb-4">
-                  3 seats left
-                </div>
+                <div class="small text-muted mb-1">🕒 1 December 2026</div>
+                <div class="small seats-text mb-4">3 seats left</div>
                 <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                  <a href="training-details.html" class="details-link">Details</a>
+                  <a href="training-details.html" onclick="localStorage.setItem('selectedCourse', 'cybersecurity')" class="details-link">Details</a>
                   <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 4 (Page 1) -->
+          <!-- Card 4: UI/UX Design Basics -->
           <div class="col" data-type="workshop" data-price="paid" data-category="creative" data-page="1">
             <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-placeholder">
-                <span>Illustration Placeholder</span>
+              <div class="ratio ratio-16x9 card-img-container">
+                <img src="../assets/img/ui-ux.jpg" alt="UI/UX Design Basics">
               </div>
               <div class="card-body d-flex flex-column p-4">
                 <div class="mb-2">
@@ -227,25 +215,21 @@
                 </div>
                 <h3 class="h6 fw-bold mb-2">UI/UX Design Basics</h3>
                 <p class="small text-muted mb-3">Discover user experience principles, wireframing, and interface design.</p>
-                <div class="small text-muted mb-1">
-                  🕒 20 November 2026
-                </div>
-                <div class="small seats-text mb-4">
-                  12 seats left
-                </div>
+                <div class="small text-muted mb-1">🕒 20 November 2026</div>
+                <div class="small seats-text mb-4">12 seats left</div>
                 <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                  <a href="training-details.html" class="details-link">Details</a>
+                  <a href="training-details.html" onclick="localStorage.setItem('selectedCourse', 'ui-ux')" class="details-link">Details</a>
                   <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 5 (Page 1) -->
+          <!-- Card 5: Machine Learning Bootcamp -->
           <div class="col" data-type="course" data-price="paid" data-category="technology" data-page="1">
             <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-placeholder">
-                <span>Illustration Placeholder</span>
+              <div class="ratio ratio-16x9 card-img-container">
+                <img src="../assets/img/int-to-ai.jpg" alt="Machine Learning Bootcamp">
               </div>
               <div class="card-body d-flex flex-column p-4">
                 <div class="mb-2">
@@ -253,25 +237,21 @@
                 </div>
                 <h3 class="h6 fw-bold mb-2">Machine Learning Bootcamp</h3>
                 <p class="small text-muted mb-3">Practical machine learning modeling, algorithms, and real-world deployment.</p>
-                <div class="small text-muted mb-1">
-                  🕒 25 November 2026
-                </div>
-                <div class="small seats-text mb-4">
-                  10 seats left
-                </div>
+                <div class="small text-muted mb-1">🕒 25 November 2026</div>
+                <div class="small seats-text mb-4">10 seats left</div>
                 <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                  <a href="training-details.html" class="details-link">Details</a>
+                  <a href="training-details.html" onclick="localStorage.setItem('selectedCourse', 'int-to-ai')" class="details-link">Details</a>
                   <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 6 (Page 1) -->
+          <!-- Card 6: Public Speaking Skills -->
           <div class="col" data-type="workshop" data-price="free" data-category="professional" data-page="1">
             <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-placeholder">
-                <span>Illustration Placeholder</span>
+              <div class="ratio ratio-16x9 card-img-container">
+                <img src="../assets/img/pub.jpg" alt="Public Speaking Skills">
               </div>
               <div class="card-body d-flex flex-column p-4">
                 <div class="mb-2">
@@ -279,25 +259,21 @@
                 </div>
                 <h3 class="h6 fw-bold mb-2">Public Speaking Skills</h3>
                 <p class="small text-muted mb-3">Master presentation structure, vocal presence, and audience engagement.</p>
-                <div class="small text-muted mb-1">
-                  🕒 28 November 2026
-                </div>
-                <div class="small seats-text mb-4">
-                  15 seats left
-                </div>
+                <div class="small text-muted mb-1">🕒 28 November 2026</div>
+                <div class="small seats-text mb-4">15 seats left</div>
                 <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                  <a href="training-details.html" class="details-link">Details</a>
+                  <a href="training-details.html" onclick="localStorage.setItem('selectedCourse', 'pub')" class="details-link">Details</a>
                   <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 7 (Page 2) -->
+          <!-- Card 7: Advanced JavaScript -->
           <div class="col" data-type="course" data-price="paid" data-category="technology" data-page="2" style="display: none;">
             <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-placeholder">
-                <span>Illustration Placeholder</span>
+              <div class="ratio ratio-16x9 card-img-container">
+                <img src="../assets/img/jss.jpg" alt="Advanced JavaScript">
               </div>
               <div class="card-body d-flex flex-column p-4">
                 <div class="mb-2">
@@ -305,25 +281,21 @@
                 </div>
                 <h3 class="h6 fw-bold mb-2">Advanced JavaScript</h3>
                 <p class="small text-muted mb-3">Deep dive into async execution, closures, OOP, and modern JS patterns.</p>
-                <div class="small text-muted mb-1">
-                  🕒 2 December 2026
-                </div>
-                <div class="small seats-text mb-4">
-                  4 seats left
-                </div>
+                <div class="small text-muted mb-1">🕒 2 December 2026</div>
+                <div class="small seats-text mb-4">4 seats left</div>
                 <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                  <a href="training-details.html" class="details-link">Details</a>
+                  <a href="training-details.html" onclick="localStorage.setItem('selectedCourse', 'jss')" class="details-link">Details</a>
                   <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 8 (Page 2) -->
+          <!-- Card 8: Graphic Design Essentials -->
           <div class="col" data-type="workshop" data-price="free" data-category="creative" data-page="2" style="display: none;">
             <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-placeholder">
-                <span>Illustration Placeholder</span>
+              <div class="ratio ratio-16x9 card-img-container">
+                <img src="../assets/img/graphic.jpg" alt="Graphic Design Essentials">
               </div>
               <div class="card-body d-flex flex-column p-4">
                 <div class="mb-2">
@@ -331,25 +303,21 @@
                 </div>
                 <h3 class="h6 fw-bold mb-2">Graphic Design Essentials</h3>
                 <p class="small text-muted mb-3">Learn layout design, typography rules, and vector asset creation.</p>
-                <div class="small text-muted mb-1">
-                  🕒 5 December 2026
-                </div>
-                <div class="small seats-text mb-4">
-                  7 seats left
-                </div>
+                <div class="small text-muted mb-1">🕒 5 December 2026</div>
+                <div class="small seats-text mb-4">7 seats left</div>
                 <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                  <a href="training-details.html" class="details-link">Details</a>
+                  <a href="training-details.html" onclick="localStorage.setItem('selectedCourse', 'graphic')" class="details-link">Details</a>
                   <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 9 (Page 2) -->
+          <!-- Card 9: Project Management -->
           <div class="col" data-type="course" data-price="paid" data-category="professional" data-page="2" style="display: none;">
             <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-placeholder">
-                <span>Illustration Placeholder</span>
+              <div class="ratio ratio-16x9 card-img-container">
+                <img src="../assets/img/project-management.jpg" alt="Project Management">
               </div>
               <div class="card-body d-flex flex-column p-4">
                 <div class="mb-2">
@@ -357,14 +325,10 @@
                 </div>
                 <h3 class="h6 fw-bold mb-2">Project Management</h3>
                 <p class="small text-muted mb-3">Learn how to plan, schedule and deliver projects on time and within budget.</p>
-                <div class="small text-muted mb-1">
-                  🕒 26 November 2026
-                </div>
-                <div class="small seats-text mb-4">
-                  9 seats left
-                </div>
+                <div class="small text-muted mb-1">🕒 26 November 2026</div>
+                <div class="small seats-text mb-4">9 seats left</div>
                 <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                  <a href="training-details.html" class="details-link">Details</a>
+                 <a href="training-details.html" onclick="localStorage.setItem('selectedCourse', 'project-management')" class="details-link">Details</a>
                   <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
                 </div>
               </div>
