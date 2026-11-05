@@ -8,7 +8,29 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-role="manager" data-page="schedule">
-<div id="site-header"></div>
+  <!-- Header (same layout as the homepage) -->
+  <header class="site-header">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="Levent — Learn, Connect, Grow" class="brand-logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../manager/requests.html">Requests</a>
+      <a href="../manager/schedule.html" class="active" aria-current="page">Schedule</a>
+      <a href="../manager/payments.html">Payments</a>
+      <a href="../manager/announcements.html">Announcements</a>
+    </nav>
+    <div class="header-tools">
+      <label for="role-switch" class="visually-hidden">Switch role</label>
+      <select id="role-switch" class="form-select role-select" onchange="location.href = this.value">
+        <option value="../participant/trainings.html">Participant</option>
+        <option value="../trainer/my-trainings.html">Trainer</option>
+        <option value="../manager/requests.html" selected>Manager</option>
+        <option value="../admin/dashboard.html">Admin</option>
+      </select>
+      <a href="../alerts.html" class="bell" aria-label="Alerts">&#128276;<i></i></a>
+      <a href="../profile.html" class="user-chip"><span class="avatar">TM</span><span>Training Manager</span></a>
+    </div>
+  </header>
 <main class="container">
 <div class="page-head"><p class="eyebrow">Manager</p><h1>Schedule</h1><p class="muted">Create sessions, assign a room and publish. The system blocks room and time clashes.</p></div>
 <div class="layout-2"><div><div class="card" style="margin-bottom:1.25rem"><div class="field"><label class="lbl" for="training-pick">Training</label><select class="form-select" id="training-pick"></select><p class="small muted" id="train-info" style="margin-top:.4rem"></p></div>
@@ -17,9 +39,15 @@
 <aside class="card side"><h3>Assign room</h3><div class="field"><label class="lbl" for="room-pick">Room</label><select class="form-select" id="room-pick"></select></div>
 <div id="clash-box" class="notice"></div><button class="btn btn-primary w-100" id="save-schedule">Save schedule and publish</button></aside></div>
 </main>
-<div id="site-footer"></div>
-<script src="../assets/js/data.js"></script>
-<script src="../assets/js/layout.js"></script>
-<script src="../assets/js/scheduling.js"></script>
+  <!-- Footer (same layout as the homepage) -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+      </a>
+      <p>LEARN · CONNECT · GROW</p>
+    </div>
+    <p>&copy; 2026 Training Events. All rights reserved.</p>
+  </footer>
 </body>
 </html>

@@ -8,7 +8,29 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-role="trainer" data-page="my-trainings">
-<div id="site-header"></div>
+  <!-- Header (same layout as the homepage) -->
+  <header class="site-header">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="Levent — Learn, Connect, Grow" class="brand-logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../trainer/my-trainings.html" class="active" aria-current="page">My trainings</a>
+      <a href="../trainer/new-request.html">New request</a>
+      <a href="../trainer/attendance.html">Attendance</a>
+      <a href="../trainer/applications.html">Applications</a>
+    </nav>
+    <div class="header-tools">
+      <label for="role-switch" class="visually-hidden">Switch role</label>
+      <select id="role-switch" class="form-select role-select" onchange="location.href = this.value">
+        <option value="../participant/trainings.html">Participant</option>
+        <option value="../trainer/my-trainings.html" selected>Trainer</option>
+        <option value="../manager/requests.html">Manager</option>
+        <option value="../admin/dashboard.html">Admin</option>
+      </select>
+      <a href="../alerts.html" class="bell" aria-label="Alerts">&#128276;<i></i></a>
+      <a href="../profile.html" class="user-chip"><span class="avatar">TB</span><span>TechBridge Institute</span></a>
+    </div>
+  </header>
 <main class="container">
 <div class="page-head cols" style="align-items:flex-end"><div><p class="eyebrow">Trainer</p><h1>My trainings</h1><p class="muted">Your requests and published trainings.</p></div>
 <div style="flex:0 0 auto"><a class="btn btn-primary" href="new-request.html">New request</a></div></div>
@@ -17,10 +39,15 @@
 <div class="tabs" id="status-tabs" aria-label="Filter by status"><button class="active" data-f="all">All</button><button data-f="pending">Waiting</button><button data-f="published">Published</button><button data-f="done">Finished</button></div>
 <div class="table-wrap"><table class="table align-middle mb-0"><thead><tr><th>Training</th><th>Dates</th><th class="num">Seats</th><th>Fee</th><th>Status</th><th>Actions</th></tr></thead><tbody id="my-rows"></tbody></table></div>
 </main>
-<div id="site-footer"></div>
-<script src="../assets/js/data.js"></script>
-<script src="../assets/js/layout.js"></script>
-<script src="../assets/js/scheduling.js"></script>
-<script src="../assets/js/requests.js"></script>
+  <!-- Footer (same layout as the homepage) -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+      </a>
+      <p>LEARN · CONNECT · GROW</p>
+    </div>
+    <p>&copy; 2026 Training Events. All rights reserved.</p>
+  </footer>
 </body>
 </html>

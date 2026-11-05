@@ -7,20 +7,88 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
-  <!-- Owner: Shaima | Module 1 -->
-  <div id="site-header"></div>
+<body class="dashboard-page">
 
-  <main class="container py-4">
-    <h1>Rooms and resources</h1>
-    <!-- TODO: page content -->
-  </main>
+    <!-- Owner: Shaima | Module 1 -->
 
-  <div id="site-footer"></div>
+    <div class="app-layout">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/data.js"></script>
-  <script src="../assets/js/layout.js"></script>
-  <script src="../assets/js/auth.js"></script>
+        <!-- SIDEBAR (same as admin/dashboard.html) -->
+        <aside class="sidebar">
+
+            <a href="../index.html" class="sidebar-brand">
+                <img src="../assets/img/logo.png" alt="Levent - Learn, Connect, Grow" class="brand-logo">
+            </a>
+
+            <nav class="sidebar-nav" aria-label="Main navigation">
+
+                <p class="sidebar-label">ADMIN</p>
+
+                <a href="dashboard.html" class="sidebar-link">
+                    <span class="nav-icon" aria-hidden="true">▦</span>
+                    Dashboard
+                </a>
+
+                <a href="users.html" class="sidebar-link">
+                    <span class="nav-icon" aria-hidden="true">◎</span>
+                    Users
+                </a>
+
+                <a href="categories.html" class="sidebar-link">
+                    <span class="nav-icon" aria-hidden="true">◈</span>
+                    Categories
+                </a>
+
+                <a href="rooms.html" class="sidebar-link active"
+                   aria-current="page">
+                    <span class="nav-icon" aria-hidden="true">▣</span>
+                    Rooms
+                </a>
+
+                <p class="sidebar-label">ACCOUNT</p>
+
+                <a href="../profile.html" class="sidebar-link">
+                    <span class="nav-icon" aria-hidden="true">◉</span>
+                    My Profile
+                </a>
+
+                <a href="../alerts.html" class="sidebar-link">
+                    <span class="nav-icon" aria-hidden="true">♧</span>
+                    Alerts
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="../login.html" class="sidebar-link logout-link">
+                    <span class="nav-icon" aria-hidden="true">↪</span>
+                    Log out
+                </a>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-main">
+
+            <header class="dashboard-topbar">
+                <div>
+                    <p class="dashboard-breadcrumb">Admin / Rooms</p>
+                    <h1>Rooms and resources</h1>
+                </div>
+
+                <div class="topbar-user">
+                    <span class="topbar-avatar">SA</span>
+                    <span>Shaima</span>
+                </div>
+            </header>
+
+            <!-- TODO: page content -->
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
