@@ -83,12 +83,516 @@
                 </div>
             </header>
 
-            <!-- TODO: page content -->
+  
+<!-- PAGE INTRODUCTION -->
+<section class="users-intro">
+
+    <div>
+        <p class="users-eyebrow">ADMINISTRATION</p>
+
+        <h2>Manage Users and Roles</h2>
+
+        <p>
+            View registered users, manage their accounts
+            and review their assigned roles.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- USER STATISTICS -->
+<section class="users-stats">
+
+    <article class="users-stat-card">
+
+        <div class="users-stat-icon total-users-icon">◎</div>
+
+        <div>
+            <p>Total Users</p>
+            <h2>248</h2>
+        </div>
+
+    </article>
+
+
+    <article class="users-stat-card">
+
+        <div class="users-stat-icon participant-icon">♙</div>
+
+        <div>
+            <p>Participants</p>
+            <h2>182</h2>
+        </div>
+
+    </article>
+
+
+    <article class="users-stat-card">
+
+        <div class="users-stat-icon trainer-icon">✦</div>
+
+        <div>
+            <p>Trainers</p>
+            <h2>42</h2>
+        </div>
+
+    </article>
+
+
+    <article class="users-stat-card">
+
+        <div class="users-stat-icon manager-icon">◈</div>
+
+        <div>
+            <p>Managers</p>
+            <h2>24</h2>
+        </div>
+
+    </article>
+
+</section>
+
+
+<!-- USERS MANAGEMENT -->
+<section class="users-management">
+
+    <!-- TOOLBAR -->
+    <div class="users-toolbar">
+
+        <div>
+            <h2>All Users</h2>
+
+            <p>
+                View and manage registered platform users.
+            </p>
+        </div>
+
+
+        <div class="users-toolbar-actions">
+
+            <!-- Search -->
+            <form class="users-search" action="#" method="get">
+
+                <label for="user-search" class="visually-hidden">
+                    Search users
+                </label>
+
+                <input
+                    type="search"
+                    id="user-search"
+                    name="q"
+                    placeholder="Search by name or email..."
+                >
+
+                <button type="submit" aria-label="Search">
+                    ⌕
+                </button>
+
+            </form>
+
+
+            <!-- Add User -->
+            <details class="add-user-dropdown">
+
+                <summary>+ Add User</summary>
+
+                <div class="add-user-form">
+
+                    <h3>Add New User</h3>
+
+                    <form action="#" method="get">
+
+                        <div class="user-form-field">
+
+                            <label for="new-user-name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="new-user-name"
+                                name="name"
+                                placeholder="Enter full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="user-form-field">
+
+                            <label for="new-user-email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="new-user-email"
+                                name="email"
+                                placeholder="Enter email address"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="user-form-field">
+
+                            <label for="new-user-role">
+                                Assigned Role
+                            </label>
+
+                            <select id="new-user-role" name="role">
+
+                                <option value="participant">
+                                    Participant
+                                </option>
+
+                                <option value="trainer">
+                                    Trainer
+                                </option>
+
+                                <option value="manager">
+                                    Manager
+                                </option>
+
+                                <option value="admin">
+                                    Administrator
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="user-form-field">
+
+                            <label for="new-user-status">
+                                Account Status
+                            </label>
+
+                            <select id="new-user-status" name="status">
+
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="user-form-buttons">
+
+                            <button type="reset" class="user-cancel">
+                                Clear
+                            </button>
+
+                            <button type="button" class="user-save">
+                                Add User
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+
+    <!-- ROLE FILTERS -->
+
+    <input
+        type="radio"
+        name="user-filter"
+        id="users-all"
+        class="user-filter-input"
+        checked
+    >
+
+    <input
+        type="radio"
+        name="user-filter"
+        id="users-participants"
+        class="user-filter-input"
+    >
+
+    <input
+        type="radio"
+        name="user-filter"
+        id="users-trainers"
+        class="user-filter-input"
+    >
+
+    <input
+        type="radio"
+        name="user-filter"
+        id="users-managers"
+        class="user-filter-input"
+    >
+
+
+    <div class="users-filters">
+
+        <label for="users-all" class="user-filter">
+            All Users
+        </label>
+
+        <label for="users-participants" class="user-filter">
+            Participants
+        </label>
+
+        <label for="users-trainers" class="user-filter">
+            Trainers
+        </label>
+
+        <label for="users-managers" class="user-filter">
+            Managers
+        </label>
+
+    </div>
+
+
+    <!-- USERS TABLE -->
+    <div class="users-table-wrapper">
+
+        <table class="users-table">
+
+            <thead>
+
+                <tr>
+                    <th>User</th>
+                    <th>Email Address</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Joined</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <!-- PARTICIPANT 1 -->
+                <tr data-role="participant">
+
+                    <td>
+                        <div class="user-table-profile">
+
+                            <span class="user-table-avatar avatar-purple">
+                                HI
+                            </span>
+
+                            <strong>Heba Inbaq</strong>
+
+                        </div>
+                    </td>
+
+                    <td>Heba@example.com</td>
+
+                    <td>
+                        <span class="user-role participant-role">
+                            Participant
+                        </span>
+                    </td>
+
+                    <td>
+                        <span class="user-status active-status">
+                            Active
+                        </span>
+                    </td>
+
+                    <td>04 Nov 2026</td>
+
+                    <td>
+                        <div class="user-table-actions">
+
+                            <a href="#"
+                               class="user-edit">
+                                Edit
+                            </a>
+
+                            <a href="#"
+                               class="user-more">
+                                More
+                            </a>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- MANAGER 1 -->
+                <tr data-role="manager">
+
+                    <td>
+                        <div class="user-table-profile">
+
+                            <span class="user-table-avatar avatar-orange">
+                                SW
+                            </span>
+
+                            <strong>Shora Wael</strong>
+
+                        </div>
+                    </td>
+
+                    <td>shorey_4488@limu.edu.ly</td>
+
+                    <td>
+                        <span class="user-role manager-role">
+                            Manager
+                        </span>
+                    </td>
+
+                    <td>
+                        <span class="user-status active-status">
+                            Active
+                        </span>
+                    </td>
+
+                    <td>02 Nov 2026</td>
+
+                    <td>
+                        <div class="user-table-actions">
+
+                            <a href="#" class="user-edit">Edit</a>
+                            <a href="#" class="user-more">More</a>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- PARTICIPANT 2 -->
+                <tr data-role="participant">
+
+                    <td>
+                        <div class="user-table-profile">
+
+                            <span class="user-table-avatar avatar-green">
+                                SA
+                            </span>
+
+                            <strong>Shaima Abdulsalam</strong>
+
+                        </div>
+                    </td>
+
+                    <td>shayyima_4421@limu.edu.ly</td>
+
+                    <td>
+                        <span class="user-role participant-role">
+                            Participant
+                        </span>
+                    </td>
+
+                    <td>
+                        <span class="user-status inactive-status">
+                            Inactive
+                        </span>
+                    </td>
+
+                    <td>01 Nov 2026</td>
+
+                    <td>
+                        <div class="user-table-actions">
+
+                            <a href="#" class="user-edit">Edit</a>
+                            <a href="#" class="user-more">More</a>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+                <!-- TRAINER 2 -->
+                <tr data-role="trainer">
+
+                    <td>
+                        <div class="user-table-profile">
+
+                            <span class="user-table-avatar avatar-pink">
+                                YE
+                            </span>
+
+                            <strong>Yasmeena Elmismary</strong>
+
+                        </div>
+                    </td>
+
+                    <td>yasmeena_4415@limu.edu.ly</td>
+
+                    <td>
+                        <span class="user-role trainer-role">
+                            Trainer
+                        </span>
+                    </td>
+
+                    <td>
+                        <span class="user-status active-status">
+                            Active
+                        </span>
+                    </td>
+
+                    <td>30 Oct 2026</td>
+
+                    <td>
+                        <div class="user-table-actions">
+
+                            <a href="#" class="user-edit">Edit</a>
+                            <a href="#" class="user-more">More</a>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- TABLE FOOTER -->
+    <div class="users-table-footer">
+
+        <p>Showing 5 sample users</p>
+
+        <div class="users-pagination">
+
+            <button type="button" disabled>
+                Previous
+            </button>
+
+            <span>1</span>
+
+            <button type="button" disabled>
+                Next
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
 
         </main>
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
