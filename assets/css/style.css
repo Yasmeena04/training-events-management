@@ -5419,3 +5419,22 @@ fieldset.section legend {
 .steps li {
     margin-bottom: 0.6rem;
 }
+
+
+/* ==========================================
+   ATTENDANCE PAGE (trainer/attendance.html) — Yasmeena
+========================================== */
+
+.att-choice {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.att-choice label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    font-size: 0.9rem;
+    cursor: pointer;
+}
