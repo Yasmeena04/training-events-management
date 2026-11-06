@@ -5136,3 +5136,196 @@ tbody tr:not([data-status="maintenance"]) {
     }
 
 }
+
+
+/* ==========================================
+   ROLES PAGE (admin/roles.html) — Yasmeena
+========================================== */
+
+.roles-section {
+    margin-bottom: 2rem;
+}
+
+.admin-icon {
+    background: #FDE7EF;
+    color: #A3214F;
+}
+
+.admin-role {
+    background: #FDE7EF;
+    color: #A3214F;
+}
+
+.permissions-table td:not(:first-child),
+.permissions-table th:not(:first-child) {
+    text-align: center;
+}
+
+.perm-yes,
+.perm-no {
+    display: inline-grid;
+    place-items: center;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    font-weight: 800;
+}
+
+.perm-yes {
+    background: var(--ok-bg);
+    color: var(--ok);
+}
+
+.perm-no {
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   STAT CARDS (requests & applications) — Yasmeena
+========================================== */
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    padding: 1.1rem 1.25rem;
+
+    background: #ffffff;
+
+    border: 1px solid var(--line);
+    border-radius: var(--r-card);
+}
+
+.stat span {
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.stat strong {
+    color: var(--night);
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+
+/* ==========================================
+   CERTIFICATES PAGE (participant/certificate.html) — Yasmeena
+========================================== */
+
+.cert-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+}
+
+.cert-course {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    padding: 1.25rem;
+
+    background: #ffffff;
+
+    border: 1px solid var(--line);
+    border-radius: var(--r-card);
+}
+
+.cert-course h3 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin: 0.6rem 0 0.3rem;
+}
+
+.cert-course .kv {
+    margin: 0;
+}
+
+.cert-course .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.cert-block {
+    margin-top: 3rem;
+    scroll-margin-top: 1.5rem;
+}
+
+.cert-course-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+@media print {
+    .cert-block {
+        margin-top: 0;
+        break-after: page;
+    }
+}
+
+
+/* ==========================================
+   APPLICATIONS & REQUESTS DETAILS — Yasmeena
+========================================== */
+
+.app-details summary {
+    color: var(--brand-dark);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.app-details .kv {
+    grid-template-columns: 90px minmax(0, 260px);
+    margin: 0.6rem 0 0;
+}
+
+.app-details .kv dd {
+    font-weight: 600;
+    text-align: left;
+}
+
+.app-actions,
+.review-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: flex-end;
+}
+
+.review-actions {
+    justify-content: flex-start;
+}
+
+.row-selected > td {
+    background: var(--tint) !important;
+}
+
+@media (max-width: 992px) {
+    .cert-list,
+    .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .layout-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .cert-list,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
