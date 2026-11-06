@@ -32,14 +32,17 @@
     </div>
   </header>
 <main class="container">
+
+  <!-- Owner: Yasmeena | Module 2 (Training Requests) -->
+
 <div class="page-head"><p class="eyebrow">Trainer</p><h1 id="form-title">New training request</h1><p class="muted">The manager reviews your request before it is published.</p></div>
 <div class="layout-2"><div>
 <div id="done-box" class="notice ok" hidden><strong>Request sent.</strong> The manager will review it. You can follow the status in <a href="my-trainings.html">My trainings</a>.</div>
-<form id="request-form" novalidate>
+<form id="request-form" action="#" method="get">
 <fieldset class="section"><legend>1. Basic information</legend>
 <div class="field"><label class="lbl" for="ttitle">Title</label><input class="form-control" type="text" id="ttitle" name="ttitle" placeholder="Web Development Fundamentals"><div class="error"></div></div>
 <div class="field"><span class="lbl">Type</span><div class="choices"><label><input type="radio" name="type" value="Workshop"> Workshop</label><label><input type="radio" name="type" value="Course" checked> Course</label><label><input type="radio" name="type" value="Internship"> Internship</label></div></div>
-<div class="field"><label class="lbl" for="category">Category</label><select class="form-select" id="category" name="category"></select></div>
+<div class="field"><label class="lbl" for="category">Category</label><select class="form-select" id="category" name="category"><option selected>Technology</option><option>Professional Skills</option><option>Creative Workshops</option><option>Business &amp; Entrepreneurship</option><option>Language &amp; Communication</option><option>Arts &amp; Culture</option></select></div>
 <div class="field"><label class="lbl" for="description">Description</label><textarea class="form-control" id="description" name="description" placeholder="What participants will learn and how the sessions work."></textarea><div class="error"></div></div></fieldset>
 <fieldset class="section"><legend>2. Dates and capacity</legend><div class="cols">
 <div class="field"><label class="lbl" for="start">Start date</label><input class="form-control" type="date" id="start" name="start"><div class="error"></div></div>
@@ -56,7 +59,7 @@
 <fieldset class="section"><legend>5. Resources needed</legend><div class="choices">
 <label><input type="checkbox" name="res" value="Computer lab" checked> Computer lab</label><label><input type="checkbox" name="res" value="Projector" checked> Projector</label>
 <label><input type="checkbox" name="res" value="Whiteboard"> Whiteboard</label><label><input type="checkbox" name="res" value="Microphone"> Microphone</label></div></fieldset>
-<div class="actions"><button type="button" class="btn btn-soft" id="save-draft">Save draft</button><button type="submit" class="btn btn-primary">Submit request</button></div>
+<div class="actions"><button type="button" class="btn btn-soft" id="save-draft">Save draft</button><button type="button" class="btn btn-primary">Submit request</button></div>
 </form></div>
 <aside class="card dashed"><h3>What happens next</h3><ol class="steps"><li>The manager reviews your request and may ask for changes.</li><li>The manager schedules the sessions and assigns a room and resources.</li><li>The training is published and participants can apply.</li></ol></aside></div>
 </main>
