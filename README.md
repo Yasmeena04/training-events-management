@@ -12,7 +12,7 @@
 
 Levent is a front-end website for managing and discovering training events, including **workshops, courses, and internships**. The platform provides different interfaces for participants, trainers, managers, and administrators.
 
-The project is built using **HTML5, CSS3, and Bootstrap 5.3**. 
+The project is built using **HTML5, CSS3, and Bootstrap 5.3**.
 
 > **Project scope:** Levent is a static front-end prototype. The pages use sample content written in HTML. Information is not saved or updated, account authentication and social sign-in are visual demonstrations only, and payment interactions are simulated. Dynamic features that require a backend or JavaScript are outside the current project scope.
 
@@ -47,42 +47,41 @@ training-events-management/
 │   ├── training-details.html  # Training information (Shora)
 │   ├── apply.html             # Training application (Shora)
 │   ├── my-trainings.html      # Participant's trainings (Shora)
-│   └── payment.html           # Simulated payment page (Shora)
-|   └── Certificate.html       (Yasmeena)
+│   ├── payment.html           # Simulated payment page (Shora)
+│   └── certificate.html       # Participant certificate view (Yasmeena)
 │
 ├── trainer/
-│   ├── my-trainings.html 
-│   ├── new-request.html  (Yasmeena)
-│   ├── attendance.html  (Yasmeena)
-│   ├── applications.html   (Yasmeena)
-│   ├── statistics.html
-│   └── organization.html
+│   ├── my-trainings.html      # Trainer's trainings (Yasmeena)
+│   ├── new-request.html       # New training request (Yasmeena)
+│   ├── attendance.html        # Attendance tracking (Yasmeena)
+│   ├── applications.html      # Review applications (Yasmeena)
+│   ├── statistics.html        # Trainer statistics (Shaima)
+│   └── organization.html      # Organization profile (Shaima)
 │
 ├── manager/
-│   ├── requests.html (Yasmeena)
-│   ├── schedule.html (Yasmeena)
-│   ├── payments.html (Shora)
-│   └── announcements.html (Shaima)
+│   ├── requests.html          # Training requests review (Yasmeena)
+│   ├── schedule.html          # Scheduling & resources (Yasmeena)
+│   ├── payments.html          # Payments list (Shora)
+│   └── announcements.html     # Announcements (Shaima)
 │
 ├── admin/
-│   ├── dashboard.html (Shaima)
-│   ├── users.html
-│   ├── roles.html
-│   ├── categories.html (Shaima)
-│   └── rooms.html (Shaima)
+│   ├── dashboard.html         # Admin dashboard (Shaima)
+│   ├── users.html             # User management (Shaima)
+│   ├── roles.html             # Roles & permissions (Yasmeena)
+│   ├── categories.html        # Training categories (Shaima)
+│   └── rooms.html             # Rooms management (Shaima)
 │
 ├── assets/
 │   ├── css/
-│   │   ├── style.css         # Shared styles (Yasmeena & Shaima)
-│   │
-│   └── img/                  # Logo and website images
+│   │   └── style.css          # Shared styles (Yasmeena & Shaima)
+│   └── img/                   # Logo and website images
 │
-├── docs/                     # Design document, diagrams, and wireframes
+├── docs/                      # Design document, diagrams, and wireframes (planned)
 ├── README.md
 └── .gitignore
 ```
 
-*The tree lists the planned project pages and stylesheets; filenames may be added as modules are completed.*
+*The tree lists the planned project pages and stylesheets; items marked (planned) are not uploaded yet.*
 
 ## How to run
 
@@ -92,7 +91,6 @@ training-events-management/
 
 Bootstrap CSS is loaded from a CDN, so an internet connection is needed to load Bootstrap's styles.
 
-
 ## Out of scope
 
 The following features are not included in the current project scope:
@@ -101,5 +99,5 @@ The following features are not included in the current project scope:
 - Backend services, database storage, or real account authentication
 - Real Google, Facebook, or Microsoft sign-in
 - Real payment processing
-- Certificate generation
+- Real certificate generation (the certificate page is a static sample view only)
 - Manager reports and advanced reporting
