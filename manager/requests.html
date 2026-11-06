@@ -32,11 +32,117 @@
     </div>
   </header>
 <main class="container">
-<div class="page-head"><p class="eyebrow">Manager</p><h1>Training requests</h1></div>
-<div class="grid-4"><div class="stat"><span>Pending review</span><strong id="s-pending">0</strong></div><div class="stat"><span>Changes requested</span><strong id="s-changes">0</strong></div>
-<div class="stat"><span>Published trainings</span><strong id="s-published">0</strong></div><div class="stat"><span>Starting this week</span><strong id="s-week">0</strong></div></div>
-<div class="layout-2"><div class="table-wrap"><table class="table align-middle mb-0"><thead><tr><th>Training</th><th>Trainer</th><th>Type</th><th>Sent</th><th>Status</th></tr></thead><tbody id="req-rows"></tbody></table></div>
-<aside class="card side" id="review-panel" aria-live="polite"></aside></div>
+
+  <!-- Owner: Yasmeena | Module 2 (Training Requests) -->
+
+  <div class="page-head">
+    <p class="eyebrow">Manager</p>
+    <h1>Training requests</h1>
+    <p class="muted">Trainers send requests for new trainings. Review the details, then approve, ask for changes or reject.</p>
+  </div>
+
+  <div class="grid-4">
+    <div class="stat"><span>Pending review</span><strong>2</strong></div>
+    <div class="stat"><span>Changes requested</span><strong>1</strong></div>
+    <div class="stat"><span>Published trainings</span><strong>2</strong></div>
+    <div class="stat"><span>Starting this week</span><strong>1</strong></div>
+  </div>
+
+  <div class="layout-2">
+
+    <!-- REQUESTS TABLE -->
+    <div class="table-wrap">
+      <table class="table align-middle mb-0">
+        <thead>
+          <tr><th>Training</th><th>Trainer</th><th>Type</th><th>Sent</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr class="row-selected">
+            <td class="fw-semibold">Machine Learning Bootcamp</td>
+            <td>AI Initiative</td>
+            <td>Course</td>
+            <td>04 Nov 2026</td>
+            <td><span class="tag">Pending review</span></td>
+          </tr>
+          <tr>
+            <td class="fw-semibold">Advanced JavaScript</td>
+            <td>Code Academy</td>
+            <td>Workshop</td>
+            <td>03 Nov 2026</td>
+            <td><span class="tag">Pending review</span></td>
+          </tr>
+          <tr>
+            <td class="fw-semibold">Graphic Design Essentials</td>
+            <td>Creative Hub</td>
+            <td>Workshop</td>
+            <td>01 Nov 2026</td>
+            <td><span class="tag warn">Changes requested</span></td>
+          </tr>
+          <tr>
+            <td class="fw-semibold">Summer Internship: Software Engineering</td>
+            <td>Tech Lab</td>
+            <td>Internship</td>
+            <td>28 Oct 2026</td>
+            <td><span class="tag ok">Published</span></td>
+          </tr>
+          <tr>
+            <td class="fw-semibold">Project Management</td>
+            <td>Management Institute</td>
+            <td>Course</td>
+            <td>25 Oct 2026</td>
+            <td><span class="tag ok">Published</span></td>
+          </tr>
+          <tr>
+            <td class="fw-semibold">Public Speaking Skills</td>
+            <td>Leadership Center</td>
+            <td>Workshop</td>
+            <td>22 Oct 2026</td>
+            <td><span class="tag bad">Rejected</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- REVIEW PANEL: selected request -->
+    <aside class="card side" id="review-panel">
+      <p class="eyebrow">Request details</p>
+      <h2 class="h5 fw-bold mb-1">Machine Learning Bootcamp</h2>
+      <p class="muted small mb-0">Sent by <strong>AI Initiative</strong></p>
+
+      <dl class="kv">
+        <dt>Type</dt><dd>Course</dd>
+        <dt>Category</dt><dd>Technology</dd>
+        <dt>Dates</dt><dd>01 Dec – 27 Dec 2026</dd>
+        <dt>Sessions</dt><dd>8 sessions · Sun &amp; Tue</dd>
+        <dt>Time</dt><dd>4:00 – 7:00 PM</dd>
+        <dt>Seats</dt><dd>25</dd>
+        <dt>Fee</dt><dd>200 LYD</dd>
+        <dt>Room</dt><dd>Computer lab (requested)</dd>
+        <dt>Level</dt><dd>Intermediate</dd>
+      </dl>
+
+      <p class="lbl">Description</p>
+      <p class="muted small">Hands-on bootcamp covering regression, classification and model
+        evaluation with Python. Participants finish with a small project.</p>
+
+      <p class="lbl">Requirements</p>
+      <p class="muted small">Basic Python and a personal laptop.</p>
+
+      <form action="#" method="get">
+        <div class="field">
+          <label for="review-note" class="lbl">Note to the trainer</label>
+          <textarea id="review-note" name="note" class="form-control" rows="3"
+            placeholder="Required when asking for changes or rejecting"></textarea>
+        </div>
+        <div class="review-actions">
+          <button type="button" class="btn btn-primary">Approve &amp; publish</button>
+          <button type="button" class="btn btn-soft">Request changes</button>
+          <button type="button" class="btn btn-soft">Reject</button>
+        </div>
+      </form>
+    </aside>
+
+  </div>
 </main>
   <!-- Footer (same layout as the homepage) -->
   <footer class="site-footer">
