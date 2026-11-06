@@ -54,9 +54,7 @@ training-events-management/
 │   ├── my-trainings.html      # Trainer's trainings (Yasmeena)
 │   ├── new-request.html       # New training request (Yasmeena)
 │   ├── attendance.html        # Attendance tracking (Yasmeena)
-│   ├── applications.html      # Review applications (Yasmeena)
-│   ├── statistics.html        # Trainer statistics (Shaima)
-│   └── organization.html      # Organization profile (Shaima)
+│   └── applications.html      # Review applications (Yasmeena)
 │
 ├── manager/
 │   ├── requests.html          # Training requests review (Yasmeena)
@@ -76,12 +74,14 @@ training-events-management/
 │   │   └── style.css          # Shared styles (Yasmeena & Shaima)
 │   └── img/                   # Logo and website images
 │
-├── docs/                      # Design document, diagrams, and wireframes (planned)
+├── docs/
+│   └── Training_Events_Management.docx   # Design document
+│
 ├── README.md
 └── .gitignore
 ```
 
-*The tree lists the planned project pages and stylesheets; items marked (planned) are not uploaded yet.*
+*The tree lists the planned project pages and stylesheets; filenames may be added as modules are completed.*
 
 ## How to run
 
