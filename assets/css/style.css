@@ -6122,3 +6122,40 @@ label[for="announcement-drafts"] {
 
 }
 
+
+
+/* ==========================================
+   FORM VALIDATION (login.html & register.html)
+   The browser checks the rules written in the HTML
+   (required, type="email", minlength, pattern).
+   :user-invalid only turns red after the user has typed
+   in a field or pressed the submit button.
+========================================== */
+
+.field-hint {
+    color: var(--muted);
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.auth-field input:user-invalid {
+    border-color: var(--bad);
+    background: var(--bad-bg);
+}
+
+.auth-field input:user-invalid:focus {
+    box-shadow: 0 0 0 3px rgba(179, 38, 30, 0.15);
+}
+
+.auth-field input:user-invalid + .field-hint {
+    color: var(--bad);
+    font-weight: 700;
+}
+
+.auth-field input:user-valid {
+    border-color: var(--ok);
+}
+
+.auth-field input:user-valid + .field-hint {
+    color: var(--ok);
+}
