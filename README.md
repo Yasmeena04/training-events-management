@@ -48,17 +48,17 @@ training-events-management/
 │   ├── apply.html             # Training application (Shora)
 │   ├── my-trainings.html      # Participant's trainings (Shora)
 │   ├── payment.html           # Simulated payment page (Shora)
-│   └── certificate.html       # Participant certificate view (Yasmeena)
+│   └── certificate.html       # Participant certificate view (Yasmina)
 │
 ├── trainer/
-│   ├── my-trainings.html      # Trainer's trainings (Yasmeena)
-│   ├── new-request.html       # New training request (Yasmeena)
-│   ├── attendance.html        # Attendance tracking (Yasmeena)
-│   └── applications.html      # Review applications (Yasmeena)
+│   ├── my-trainings.html      # Trainer's trainings (Yasmina)
+│   ├── new-request.html       # New training request (Yasmina)
+│   ├── attendance.html        # Attendance tracking (Yasmina)
+│   └── applications.html      # Review applications (Yasmina)
 │
 ├── manager/
-│   ├── requests.html          # Training requests review (Yasmeena)
-│   ├── schedule.html          # Scheduling & resources (Yasmeena)
+│   ├── requests.html          # Training requests review (Yasmina)
+│   ├── schedule.html          # Scheduling & resources (Yasmina)
 │   ├── payments.html          # Payments list (Shora)
 │   └── announcements.html     # Announcements (Shaima)
 │
@@ -70,7 +70,7 @@ training-events-management/
 │
 ├── assets/
 │   ├── css/
-│   │   └── style.css          # Shared styles (Yasmeena & Shaima)
+│   │   └── style.css          # Shared styles (Yasmina & Shaima)
 │   └── img/                   # Logo and website images
 │
 ├── docs/
