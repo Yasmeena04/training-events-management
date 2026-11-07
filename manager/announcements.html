@@ -9,18 +9,583 @@
 </head>
 <body>
   <!-- Owner: Shaima | Module 6 -->
-  <div id="site-header"></div>
+  <!-- Header (same layout as the homepage) -->
+  <header class="site-header">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="Levent — Learn, Connect, Grow" class="brand-logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../manager/requests.html">Requests</a>
+      <a href="../manager/schedule.html">Schedule</a>
+      <a href="../manager/payments.html">Payments</a>
+      <a href="../manager/announcements.html" class="active" aria-current="page">Announcements</a>
+    </nav>
+    <div class="header-tools">
+<!-- CSS-only role switcher -->
+<details class="role-switcher">
 
-  <main class="container py-4">
-    <h1>Announcements</h1>
-    <!-- TODO: page content -->
-  </main>
+    <summary>Manager</summary>
 
-  <div id="site-footer"></div>
+    <div class="role-switcher-menu">
+
+        <a href="../participant/trainings.html">Participant</a>
+
+        <a href="../trainer/my-trainings.html">Trainer</a>
+
+        <a href="../manager/requests.html">Manager</a>
+
+        <a href="../admin/dashboard.html">Admin</a>
+
+    </div>
+
+</details>
+      <a href="../alerts.html" class="bell" aria-label="Alerts">&#128276;<i></i></a>
+      <a href="../profile.html" class="user-chip"><span class="avatar">TM</span><span>Training Manager</span></a>
+    </div>
+  </header>
+
+
+<main class="container py-4 announcements-main">
+
+    <!-- PAGE INTRODUCTION -->
+    <section class="announcements-intro">
+
+        <div>
+            <p class="announcements-eyebrow">MANAGER WORKSPACE</p>
+
+            <h1>Announcements</h1>
+
+            <p>
+                Share important updates and keep participants
+                and trainers informed.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ANNOUNCEMENT STATISTICS -->
+    <section class="announcement-stats">
+
+        <article class="announcement-stat-card">
+
+            <div class="announcement-stat-icon total-announcements-icon">
+                ▤
+            </div>
+
+            <div>
+                <p>Total Announcements</p>
+                <h2>4</h2>
+            </div>
+
+        </article>
+
+
+        <article class="announcement-stat-card">
+
+            <div class="announcement-stat-icon published-icon">
+                ✓
+            </div>
+
+            <div>
+                <p>Published</p>
+                <h2>2</h2>
+            </div>
+
+        </article>
+
+
+        <article class="announcement-stat-card">
+
+            <div class="announcement-stat-icon drafts-icon">
+                ◷
+            </div>
+
+            <div>
+                <p>Drafts</p>
+                <h2>2</h2>
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ANNOUNCEMENT MANAGEMENT -->
+    <section class="announcement-management">
+
+        <!-- FILTER INPUTS -->
+        <input
+            type="radio"
+            name="announcement-filter"
+            id="announcement-all"
+            class="announcement-filter-input"
+            checked
+        >
+
+        <input
+            type="radio"
+            name="announcement-filter"
+            id="announcement-published"
+            class="announcement-filter-input"
+        >
+
+        <input
+            type="radio"
+            name="announcement-filter"
+            id="announcement-drafts"
+            class="announcement-filter-input"
+        >
+
+
+        <!-- TOOLBAR -->
+        <div class="announcement-toolbar">
+
+            <div>
+                <h2>All Announcements</h2>
+
+                <p>
+                    Create and manage your announcements.
+                </p>
+            </div>
+
+
+            <!-- CREATE ANNOUNCEMENT -->
+            <details class="create-announcement-dropdown">
+
+                <summary>+ Create Announcement</summary>
+
+                <div class="announcement-form-panel">
+
+                    <h3>Create New Announcement</h3>
+
+                    <form action="#" method="get">
+
+                        <!-- TITLE -->
+                        <div class="announcement-form-field">
+
+                            <label for="announcement-title">
+                                Announcement Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="announcement-title"
+                                name="title"
+                                placeholder="Enter announcement title"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+                        <div class="announcement-form-field">
+
+                            <label for="announcement-message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="announcement-message"
+                                name="message"
+                                rows="5"
+                                placeholder="Write your announcement..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- TARGET AUDIENCE -->
+                        <div class="announcement-form-field">
+
+                            <label for="announcement-audience">
+                                Target Audience
+                            </label>
+
+                            <select
+                                id="announcement-audience"
+                                name="audience"
+                            >
+
+                                <option value="everyone">
+                                    Everyone
+                                </option>
+
+                                <option value="participants">
+                                    Participants
+                                </option>
+
+                                <option value="trainers">
+                                    Trainers
+                                </option>
+
+                                <option value="participants-trainers">
+                                    Participants and Trainers
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- DATE -->
+                        <div class="announcement-form-field">
+
+                            <label for="announcement-date">
+                                Publication Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="announcement-date"
+                                name="publication-date"
+                            >
+
+                        </div>
+
+
+                        <!-- STATUS -->
+                        <div class="announcement-form-field">
+
+                            <label for="announcement-status">
+                                Status
+                            </label>
+
+                            <select
+                                id="announcement-status"
+                                name="status"
+                            >
+
+                                <option value="draft">Save as Draft</option>
+
+                                <option value="published">Publish</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- FORM ACTIONS -->
+                        <div class="announcement-form-actions">
+
+                            <button type="reset"
+                                    class="announcement-cancel">
+                                Clear
+                            </button>
+
+                            <button type="button"
+                                    class="announcement-save">
+                                Save Announcement
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </details>
+
+        </div>
+
+
+        <!-- FILTER NAVIGATION -->
+        <div class="announcement-filters">
+
+            <label for="announcement-all"
+                   class="announcement-filter">
+                All
+                <span>4</span>
+            </label>
+
+
+            <label for="announcement-published"
+                   class="announcement-filter">
+                Published
+                <span>2</span>
+            </label>
+
+
+            <label for="announcement-drafts"
+                   class="announcement-filter">
+                Drafts
+                <span>2</span>
+            </label>
+
+        </div>
+
+
+        <!-- ANNOUNCEMENT LIST -->
+        <div class="announcement-list">
+
+
+            <!-- ANNOUNCEMENT 1 -->
+            <article class="announcement-card"
+                     data-status="published">
+
+                <div class="announcement-card-top">
+
+                    <span class="announcement-status published">
+                        Published
+                    </span>
+
+                    <span class="announcement-date">
+                        05 November 2026
+                    </span>
+
+                </div>
+
+
+                <div class="announcement-card-body">
+
+                    <h3>New Training Opportunities Available</h3>
+
+                    <p>
+                        We are pleased to announce new training
+                        opportunities for the upcoming month.
+                        Explore the training catalogue and register
+                        for a session that matches your interests.
+                    </p>
+
+                </div>
+
+
+                <div class="announcement-card-footer">
+
+                    <div class="announcement-audience">
+
+                        <span class="audience-icon">◎</span>
+
+                        <span>
+                            Audience:
+                            <strong>All Participants</strong>
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-actions">
+
+                        <button type="button" class="announcement-edit">
+                            Edit
+                        </button>
+
+                        <button type="button" class="announcement-delete">
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ANNOUNCEMENT 2 -->
+            <article class="announcement-card"
+                     data-status="published">
+
+                <div class="announcement-card-top">
+
+                    <span class="announcement-status published">
+                        Published
+                    </span>
+
+                    <span class="announcement-date">
+                        04 November 2026
+                    </span>
+
+                </div>
+
+
+                <div class="announcement-card-body">
+
+                    <h3>Updated Training Schedule</h3>
+
+                    <p>
+                        Please note that some upcoming training
+                        sessions have updated schedules.
+                        Participants and trainers are encouraged
+                        to review their training schedules.
+                    </p>
+
+                </div>
+
+
+                <div class="announcement-card-footer">
+
+                    <div class="announcement-audience">
+
+                        <span class="audience-icon">◎</span>
+
+                        <span>
+                            Audience:
+                            <strong>Participants and Trainers</strong>
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-actions">
+
+                        <button type="button" class="announcement-edit">
+                            Edit
+                        </button>
+
+                        <button type="button" class="announcement-delete">
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ANNOUNCEMENT 3 -->
+            <article class="announcement-card"
+                     data-status="draft">
+
+                <div class="announcement-card-top">
+
+                    <span class="announcement-status draft">
+                        Draft
+                    </span>
+
+                    <span class="announcement-date">
+                        03 November 2026
+                    </span>
+
+                </div>
+
+
+                <div class="announcement-card-body">
+
+                    <h3>Upcoming Career Development Workshop</h3>
+
+                    <p>
+                        A new career development workshop is being
+                        prepared. Participants will have the
+                        opportunity to develop professional skills
+                        and explore career opportunities.
+                    </p>
+
+                </div>
+
+
+                <div class="announcement-card-footer">
+
+                    <div class="announcement-audience">
+
+                        <span class="audience-icon">◎</span>
+
+                        <span>
+                            Audience:
+                            <strong>All Participants</strong>
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-actions">
+
+                        <button type="button" class="announcement-edit">
+                            Edit
+                        </button>
+
+                        <button type="button" class="announcement-delete">
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ANNOUNCEMENT 4 -->
+            <article class="announcement-card"
+                     data-status="draft">
+
+                <div class="announcement-card-top">
+
+                    <span class="announcement-status draft">
+                        Draft
+                    </span>
+
+                    <span class="announcement-date">
+                        02 November 2026
+                    </span>
+
+                </div>
+
+
+                <div class="announcement-card-body">
+
+                    <h3>Trainer Registration Reminder</h3>
+
+                    <p>
+                        Trainers are reminded to review their
+                        information and ensure that their
+                        professional profiles are up to date.
+                    </p>
+
+                </div>
+
+
+                <div class="announcement-card-footer">
+
+                    <div class="announcement-audience">
+
+                        <span class="audience-icon">◎</span>
+
+                        <span>
+                            Audience:
+                            <strong>All Trainers</strong>
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-actions">
+
+                        <button type="button" class="announcement-edit">
+                            Edit
+                        </button>
+
+                        <button type="button" class="announcement-delete">
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+  <!-- Footer (same layout as the homepage) -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+      </a>
+      <p>LEARN · CONNECT · GROW</p>
+    </div>
+    <p>&copy; 2026 Training Events. All rights reserved.</p>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/data.js"></script>
-  <script src="../assets/js/layout.js"></script>
-  <script src="../assets/js/notifications.js"></script>
 </body>
 </html>
