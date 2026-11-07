@@ -5139,52 +5139,6 @@ tbody tr:not([data-status="maintenance"]) {
 
 
 /* ==========================================
-   ROLES PAGE (admin/roles.html) — Yasmeena
-========================================== */
-
-.roles-section {
-    margin-bottom: 2rem;
-}
-
-.admin-icon {
-    background: #FDE7EF;
-    color: #A3214F;
-}
-
-.admin-role {
-    background: #FDE7EF;
-    color: #A3214F;
-}
-
-.permissions-table td:not(:first-child),
-.permissions-table th:not(:first-child) {
-    text-align: center;
-}
-
-.perm-yes,
-.perm-no {
-    display: inline-grid;
-    place-items: center;
-
-    width: 28px;
-    height: 28px;
-
-    border-radius: 50%;
-
-    font-weight: 800;
-}
-
-.perm-yes {
-    background: var(--ok-bg);
-    color: var(--ok);
-}
-
-.perm-no {
-    color: var(--muted);
-}
-
-
-/* ==========================================
    STAT CARDS (requests & applications) — Yasmeena
 ========================================== */
 
