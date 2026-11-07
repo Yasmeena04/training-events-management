@@ -8,18 +8,140 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-role="manager" data-page="schedule">
-<div id="site-header"></div>
+  <!-- Header (same layout as the homepage) -->
+  <header class="site-header">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="Levent — Learn, Connect, Grow" class="brand-logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../manager/requests.html">Requests</a>
+      <a href="../manager/schedule.html" class="active" aria-current="page">Schedule</a>
+      <a href="../manager/payments.html">Payments</a>
+      <a href="../manager/announcements.html">Announcements</a>
+    </nav>
+    <div class="header-tools">
+      <label for="role-switch" class="visually-hidden">Switch role</label>
+      <select id="role-switch" class="form-select role-select" onchange="location.href = this.value">
+        <option value="../participant/trainings.html">Participant</option>
+        <option value="../trainer/my-trainings.html">Trainer</option>
+        <option value="../manager/requests.html" selected>Manager</option>
+        <option value="../admin/dashboard.html">Admin</option>
+      </select>
+      <a href="../alerts.html" class="bell" aria-label="Alerts">&#128276;<i></i></a>
+      <a href="../profile.html" class="user-chip"><span class="avatar">TM</span><span>Training Manager</span></a>
+    </div>
+  </header>
 <main class="container">
-<div class="page-head"><p class="eyebrow">Manager</p><h1>Schedule</h1><p class="muted">Create sessions, assign a room and publish. The system blocks room and time clashes.</p></div>
-<div class="layout-2"><div><div class="card" style="margin-bottom:1.25rem"><div class="field"><label class="lbl" for="training-pick">Training</label><select class="form-select" id="training-pick"></select><p class="small muted" id="train-info" style="margin-top:.4rem"></p></div>
-<h3>Sessions</h3><div class="table-wrap"><table class="table align-middle mb-0"><thead><tr><th class="num">#</th><th>Date</th><th>Time</th><th>Room</th></tr></thead><tbody id="session-rows"></tbody></table></div></div>
-<h2>Room timetable</h2><div class="table-wrap"><table class="table align-middle mb-0"><thead><tr><th>Date</th><th>Time</th><th>Room</th><th>Training</th></tr></thead><tbody id="timetable-rows"></tbody></table></div></div>
-<aside class="card side"><h3>Assign room</h3><div class="field"><label class="lbl" for="room-pick">Room</label><select class="form-select" id="room-pick"></select></div>
-<div id="clash-box" class="notice"></div><button class="btn btn-primary w-100" id="save-schedule">Save schedule and publish</button></aside></div>
+
+  <!-- Owner: Yasmeena | Module 3 (Scheduling & Resources) -->
+
+  <div class="page-head">
+    <p class="eyebrow">Manager</p>
+    <h1>Schedule</h1>
+    <p class="muted">Create sessions, assign a room and publish. The system blocks room and time clashes.</p>
+  </div>
+
+  <div class="layout-2">
+    <div>
+
+      <!-- TRAINING + SESSIONS -->
+      <div class="card" style="margin-bottom:1.25rem">
+        <div class="field">
+          <label class="lbl" for="training-pick">Training</label>
+          <select class="form-select" id="training-pick">
+            <option selected>Machine Learning Bootcamp (approved)</option>
+            <option>Advanced JavaScript (approved)</option>
+            <option>Graphic Design Essentials (approved)</option>
+          </select>
+        </div>
+
+        <dl class="kv schedule-info">
+          <dt>Trainer</dt><dd>AI Initiative</dd>
+          <dt>Type</dt><dd>Course · Technology</dd>
+          <dt>Dates</dt><dd>01 Dec – 27 Dec 2026</dd>
+          <dt>Sessions</dt><dd>8 sessions · Sun &amp; Tue</dd>
+          <dt>Time</dt><dd>4:00 – 7:00 PM</dd>
+          <dt>Seats</dt><dd>25</dd>
+          <dt>Needs</dt><dd>Computer lab, projector</dd>
+        </dl>
+
+        <h3>Sessions</h3>
+        <div class="table-wrap">
+          <table class="table align-middle mb-0">
+            <thead><tr><th class="num">#</th><th>Date</th><th>Time</th><th>Room</th></tr></thead>
+            <tbody>
+            <tr><td class="num">1</td><td>Tue 01 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 1</td></tr>
+            <tr><td class="num">2</td><td>Sun 06 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 1</td></tr>
+            <tr><td class="num">3</td><td>Tue 08 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 1</td></tr>
+            <tr><td class="num">4</td><td>Sun 13 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 1</td></tr>
+            <tr><td class="num">5</td><td>Tue 15 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 1</td></tr>
+            <tr><td class="num">6</td><td>Sun 20 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 1</td></tr>
+            <tr><td class="num">7</td><td>Tue 22 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 1</td></tr>
+            <tr><td class="num">8</td><td>Sun 27 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 1</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ROOM TIMETABLE -->
+      <h2 class="h4 fw-bold">Room timetable</h2>
+      <p class="muted small">Bookings in the first two weeks of December. The highlighted rows are the new sessions.</p>
+      <div class="table-wrap">
+        <table class="table align-middle mb-0">
+          <thead><tr><th>Date</th><th>Time</th><th>Room</th><th>Training</th></tr></thead>
+          <tbody>
+            <tr><td>Tue 01 Dec 2026</td><td>9:00 – 12:00 AM</td><td>Computer Lab 2</td><td>Advanced JavaScript</td></tr>
+            <tr class="row-selected"><td>Tue 01 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 1</td><td>Machine Learning Bootcamp <span class="tag">New</span></td></tr>
+            <tr><td>Sun 06 Dec 2026</td><td>10:00 – 1:00 PM</td><td>Training Room B</td><td>Project Management</td></tr>
+            <tr class="row-selected"><td>Sun 06 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 1</td><td>Machine Learning Bootcamp <span class="tag">New</span></td></tr>
+            <tr><td>Tue 08 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 2</td><td>Graphic Design Essentials</td></tr>
+            <tr class="row-selected"><td>Tue 08 Dec 2026</td><td>4:00 – 7:00 PM</td><td>Computer Lab 1</td><td>Machine Learning Bootcamp <span class="tag">New</span></td></tr>
+            <tr><td>Sun 13 Dec 2026</td><td>1:00 – 3:00 PM</td><td>Conference Room A</td><td>Public Speaking Skills</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ASSIGN ROOM -->
+    <aside class="card side">
+      <h3>Assign room</h3>
+      <div class="field">
+        <label class="lbl" for="room-pick">Room</label>
+        <select class="form-select" id="room-pick">
+          <option selected>Computer Lab 1 · 30 seats</option>
+          <option>Computer Lab 2 · 25 seats</option>
+          <option>Training Room B · 35 seats</option>
+          <option>Conference Room A · 50 seats</option>
+          <option>Meeting Room 1 · 12 seats</option>
+        </select>
+      </div>
+
+      <dl class="kv">
+        <dt>Capacity</dt><dd>30 seats (25 needed)</dd>
+        <dt>Equipment</dt><dd>30 PCs, projector</dd>
+      </dl>
+
+      <div class="notice ok">
+        <strong>No clashes.</strong> Computer Lab 1 is free at all 8 session times.
+      </div>
+      <div class="notice warn">
+        <strong>Note:</strong> Computer Lab 2 is booked on Tue 08 Dec, 4:00 – 7:00 PM
+        (Graphic Design Essentials), so it can't be used for this training.
+      </div>
+
+      <button type="button" class="btn btn-primary w-100">Save schedule and publish</button>
+    </aside>
+  </div>
 </main>
-<div id="site-footer"></div>
-<script src="../assets/js/data.js"></script>
-<script src="../assets/js/layout.js"></script>
-<script src="../assets/js/scheduling.js"></script>
+  <!-- Footer (same layout as the homepage) -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+      </a>
+      <p>LEARN · CONNECT · GROW</p>
+    </div>
+    <p>&copy; 2026 Training Events. All rights reserved.</p>
+  </footer>
 </body>
 </html>

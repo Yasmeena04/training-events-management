@@ -10,29 +10,26 @@
 <body>
 
   <!-- Owner: Shora | Module 4 -->
-  <!-- Header -->
-  <header class="app-header text-white py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a href="../index.html" class="text-decoration-none">
-        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
-      </a>
-      <nav class="app-nav d-none d-md-flex align-items-center gap-4">
-        <a href="trainings.html">Discover</a>
-        <a href="my-trainings.html" class="active">My trainings</a>
-        <a href="certificate.html">Certificates</a>
-      </nav>
-      <div class="d-flex align-items-center gap-3">
-        <select class="form-select role-select" aria-label="Role">
-          <option value="participant">Participant</option>
-          <option value="trainer">Trainer</option>
-          <option value="manager">Manager</option>
-        </select>
-        <a href="#" class="bell-btn" aria-label="Notifications">🔔<span class="dot"></span></a>
-        <div class="user-pill">
-          <div class="user-avatar" id="user-initials">G2</div>
-          <span id="user-name">Group 2</span>
-        </div>
-      </div>
+  <!-- Header (same layout as the homepage) -->
+  <header class="site-header">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="Levent — Learn, Connect, Grow" class="brand-logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../participant/trainings.html">Discover</a>
+      <a href="../participant/my-trainings.html" class="active" aria-current="page">My trainings</a>
+      <a href="../participant/certificate.html">Certificates</a>
+    </nav>
+    <div class="header-tools">
+      <label for="role-switch" class="visually-hidden">Switch role</label>
+      <select id="role-switch" class="form-select role-select" onchange="location.href = this.value">
+        <option value="../participant/trainings.html" selected>Participant</option>
+        <option value="../trainer/my-trainings.html">Trainer</option>
+        <option value="../manager/requests.html">Manager</option>
+        <option value="../admin/dashboard.html">Admin</option>
+      </select>
+      <a href="../alerts.html" class="bell" aria-label="Alerts">&#128276;<i></i></a>
+      <a href="../profile.html" class="user-chip"><span class="avatar" id="user-initials">G2</span><span id="user-name">Group 2</span></a>
     </div>
   </header>
 
@@ -50,14 +47,15 @@
   </main>
 
   <!-- Footer -->
-  <footer class="app-footer py-4 mt-5">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-      <div class="d-flex align-items-center gap-3">
+  <!-- Footer (same layout as the homepage) -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand">
         <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
-        <div class="footer-sub">Training Events Management System</div>
-      </div>
-      <p class="footer-tagline mb-0">A single place to discover, manage and complete training.</p>
+      </a>
+      <p>LEARN · CONNECT · GROW</p>
     </div>
+    <p>&copy; 2026 Training Events. All rights reserved.</p>
   </footer>
 
   <script>

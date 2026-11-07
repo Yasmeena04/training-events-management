@@ -10,35 +10,26 @@
 <body>
 
   <!-- Owner: Shora | Module 4 -->
-  <!-- Header -->
-  <header class="app-header text-white py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-
-      <a href="index.html" class="text-decoration-none">
-        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
-      </a>
-
-      <nav class="app-nav d-none d-md-flex align-items-center gap-4">
-        <a href="trainings.html" class="active">Discover</a>
-        <a href="my-trainings.html">My trainings</a>
-        <a href="certificate.html">Certificates</a>
-      </nav>
-
-      <div class="d-flex align-items-center gap-3">
-        <select class="form-select role-select" aria-label="Role">
-          <option value="participant">Participant</option>
-          <option value="trainer">Trainer</option>
-          <option value="manager">Manager</option>
-        </select>
-
-        <a href="#" class="bell-btn" aria-label="Notifications">🔔<span class="dot"></span></a>
-
-        <div class="user-pill">
-          <div class="user-avatar" id="user-initials">G2</div>
-          <span id="user-name">Group 2</span>
-        </div>
-      </div>
-
+  <!-- Header (same layout as the homepage) -->
+  <header class="site-header">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="Levent — Learn, Connect, Grow" class="brand-logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../participant/trainings.html" class="active" aria-current="page">Discover</a>
+      <a href="../participant/my-trainings.html">My trainings</a>
+      <a href="../participant/certificate.html">Certificates</a>
+    </nav>
+    <div class="header-tools">
+      <label for="role-switch" class="visually-hidden">Switch role</label>
+      <select id="role-switch" class="form-select role-select" onchange="location.href = this.value">
+        <option value="../participant/trainings.html" selected>Participant</option>
+        <option value="../trainer/my-trainings.html">Trainer</option>
+        <option value="../manager/requests.html">Manager</option>
+        <option value="../admin/dashboard.html">Admin</option>
+      </select>
+      <a href="../alerts.html" class="bell" aria-label="Alerts">&#128276;<i></i></a>
+      <a href="../profile.html" class="user-chip"><span class="avatar" id="user-initials">G2</span><span id="user-name">Group 2</span></a>
     </div>
   </header>
 
@@ -135,204 +126,186 @@
         </div>
 
         <!-- Cards grid -->
-        <div id="results" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div id="results" class="row row-cols-1 row-cols-md-2 g-4">
 
           <!-- Card 1: Intro to Data Analysis -->
           <div class="col" data-type="workshop" data-price="free" data-category="technology" data-page="1">
-            <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-container">
-                <img src="../assets/img/data-analytics.jpg" alt="Intro to Data Analysis">
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <div class="mb-2">
-                  <span class="category-pill">Technology</span>
+            <article class="training-card">
+              <img src="../assets/img/data-analytics.jpg" alt="Intro to Data Analysis" class="training-image">
+              <div class="training-card-body">
+                <span class="tag">Technology</span>
+                <h3>Intro to Data Analysis</h3>
+                <p class="training-description">Learn the fundamentals of data analysis and start building data-driven solutions.</p>
+                <div class="training-info">
+                  <p><span>◷</span><time datetime="2026-11-12">12 November 2026</time></p>
+                  <p class="seats-left">8 seats left</p>
                 </div>
-                <h3 class="h6 fw-bold mb-2">Intro to Data Analysis</h3>
-                <p class="small text-muted mb-3">Learn the fundamentals of data analysis and start building data-driven solutions.</p>
-                <div class="small text-muted mb-1">🕒 12 November 2026</div>
-                <div class="small seats-text mb-4">8 seats left</div>
-                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                <div class="training-actions">
                   <a href="training-details.html" data-course="data-analytics" class="details-link">Details</a>
-                  <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
+                  <a href="apply.html" class="btn btn-primary">Apply now</a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <!-- Card 2: Web Development Fundamentals -->
           <div class="col" data-type="course" data-price="paid" data-category="technology" data-page="1">
-            <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-container">
-                <img src="../assets/img/web-dev.jpg" alt="Web Development Fundamentals">
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <div class="mb-2">
-                  <span class="category-pill">Technology</span>
+            <article class="training-card">
+              <img src="../assets/img/web-dev.jpg" alt="Web Development Fundamentals" class="training-image">
+              <div class="training-card-body">
+                <span class="tag">Technology</span>
+                <h3>Web Development Fundamentals</h3>
+                <p class="training-description">A four-week course on building websites with HTML, CSS and JavaScript.</p>
+                <div class="training-info">
+                  <p><span>◷</span><time datetime="2026-11-17">17 November 2026</time></p>
+                  <p class="seats-left">6 seats left</p>
                 </div>
-                <h3 class="h6 fw-bold mb-2">Web Development Fundamentals</h3>
-                <p class="small text-muted mb-3">A four-week course on building websites with HTML, CSS and JavaScript.</p>
-                <div class="small text-muted mb-1">🕒 17 November 2026</div>
-                <div class="small seats-text mb-4">6 seats left</div>
-                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                <div class="training-actions">
                   <a href="training-details.html" data-course="web-dev" class="details-link">Details</a>
-                  <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
+                  <a href="apply.html" class="btn btn-primary">Apply now</a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <!-- Card 3: Summer Internship: Software Engineering -->
           <div class="col" data-type="internship" data-price="free" data-category="technology" data-page="1">
-            <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-container">
-                <img src="../assets/img/cybersecurity.jpg" alt="Summer Internship: Software Engineering">
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <div class="mb-2">
-                  <span class="category-pill">Technology</span>
+            <article class="training-card">
+              <img src="../assets/img/cybersecurity.jpg" alt="Summer Internship: Software Engineering" class="training-image">
+              <div class="training-card-body">
+                <span class="tag">Technology</span>
+                <h3>Summer Internship: Software Engineering</h3>
+                <p class="training-description">Hands-on software development experience with live projects and mentorship.</p>
+                <div class="training-info">
+                  <p><span>◷</span><time datetime="2026-12-01">1 December 2026</time></p>
+                  <p class="seats-left">3 seats left</p>
                 </div>
-                <h3 class="h6 fw-bold mb-2">Summer Internship: Software Engineering</h3>
-                <p class="small text-muted mb-3">Hands-on software development experience with live projects and mentorship.</p>
-                <div class="small text-muted mb-1">🕒 1 December 2026</div>
-                <div class="small seats-text mb-4">3 seats left</div>
-                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                <div class="training-actions">
                   <a href="training-details.html" data-course="cybersecurity" class="details-link">Details</a>
-                  <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
+                  <a href="apply.html" class="btn btn-primary">Apply now</a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <!-- Card 4: UI/UX Design Basics -->
           <div class="col" data-type="workshop" data-price="paid" data-category="creative" data-page="1">
-            <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-container">
-                <img src="../assets/img/ui-ux.jpg" alt="UI/UX Design Basics">
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <div class="mb-2">
-                  <span class="category-pill">Creative</span>
+            <article class="training-card">
+              <img src="../assets/img/ui-ux.jpg" alt="UI/UX Design Basics" class="training-image">
+              <div class="training-card-body">
+                <span class="tag">Creative</span>
+                <h3>UI/UX Design Basics</h3>
+                <p class="training-description">Discover user experience principles, wireframing, and interface design.</p>
+                <div class="training-info">
+                  <p><span>◷</span><time datetime="2026-11-20">20 November 2026</time></p>
+                  <p class="seats-left">12 seats left</p>
                 </div>
-                <h3 class="h6 fw-bold mb-2">UI/UX Design Basics</h3>
-                <p class="small text-muted mb-3">Discover user experience principles, wireframing, and interface design.</p>
-                <div class="small text-muted mb-1">🕒 20 November 2026</div>
-                <div class="small seats-text mb-4">12 seats left</div>
-                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                <div class="training-actions">
                   <a href="training-details.html" data-course="ui-ux" class="details-link">Details</a>
-                  <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
+                  <a href="apply.html" class="btn btn-primary">Apply now</a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <!-- Card 5: Machine Learning Bootcamp -->
           <div class="col" data-type="course" data-price="paid" data-category="technology" data-page="1">
-            <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-container">
-                <img src="../assets/img/int-to-ai.jpg" alt="Machine Learning Bootcamp">
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <div class="mb-2">
-                  <span class="category-pill">Technology</span>
+            <article class="training-card">
+              <img src="../assets/img/int-to-ai.jpg" alt="Machine Learning Bootcamp" class="training-image">
+              <div class="training-card-body">
+                <span class="tag">Technology</span>
+                <h3>Machine Learning Bootcamp</h3>
+                <p class="training-description">Practical machine learning modeling, algorithms, and real-world deployment.</p>
+                <div class="training-info">
+                  <p><span>◷</span><time datetime="2026-11-25">25 November 2026</time></p>
+                  <p class="seats-left">10 seats left</p>
                 </div>
-                <h3 class="h6 fw-bold mb-2">Machine Learning Bootcamp</h3>
-                <p class="small text-muted mb-3">Practical machine learning modeling, algorithms, and real-world deployment.</p>
-                <div class="small text-muted mb-1">🕒 25 November 2026</div>
-                <div class="small seats-text mb-4">10 seats left</div>
-                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                <div class="training-actions">
                   <a href="training-details.html" data-course="int-to-ai" class="details-link">Details</a>
-                  <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
+                  <a href="apply.html" class="btn btn-primary">Apply now</a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <!-- Card 6: Public Speaking Skills -->
           <div class="col" data-type="workshop" data-price="free" data-category="professional" data-page="1">
-            <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-container">
-                <img src="../assets/img/pub.jpg" alt="Public Speaking Skills">
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <div class="mb-2">
-                  <span class="category-pill">Professional</span>
+            <article class="training-card">
+              <img src="../assets/img/pub.jpg" alt="Public Speaking Skills" class="training-image">
+              <div class="training-card-body">
+                <span class="tag">Professional</span>
+                <h3>Public Speaking Skills</h3>
+                <p class="training-description">Master presentation structure, vocal presence, and audience engagement.</p>
+                <div class="training-info">
+                  <p><span>◷</span><time datetime="2026-11-28">28 November 2026</time></p>
+                  <p class="seats-left">15 seats left</p>
                 </div>
-                <h3 class="h6 fw-bold mb-2">Public Speaking Skills</h3>
-                <p class="small text-muted mb-3">Master presentation structure, vocal presence, and audience engagement.</p>
-                <div class="small text-muted mb-1">🕒 28 November 2026</div>
-                <div class="small seats-text mb-4">15 seats left</div>
-                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                <div class="training-actions">
                   <a href="training-details.html" data-course="pub" class="details-link">Details</a>
-                  <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
+                  <a href="apply.html" class="btn btn-primary">Apply now</a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <!-- Card 7: Advanced JavaScript -->
           <div class="col" data-type="course" data-price="paid" data-category="technology" data-page="2" style="display: none;">
-            <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-container">
-                <img src="../assets/img/jss.jpg" alt="Advanced JavaScript">
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <div class="mb-2">
-                  <span class="category-pill">Technology</span>
+            <article class="training-card">
+              <img src="../assets/img/jss.jpg" alt="Advanced JavaScript" class="training-image">
+              <div class="training-card-body">
+                <span class="tag">Technology</span>
+                <h3>Advanced JavaScript</h3>
+                <p class="training-description">Deep dive into async execution, closures, OOP, and modern JS patterns.</p>
+                <div class="training-info">
+                  <p><span>◷</span><time datetime="2026-12-02">2 December 2026</time></p>
+                  <p class="seats-left">4 seats left</p>
                 </div>
-                <h3 class="h6 fw-bold mb-2">Advanced JavaScript</h3>
-                <p class="small text-muted mb-3">Deep dive into async execution, closures, OOP, and modern JS patterns.</p>
-                <div class="small text-muted mb-1">🕒 2 December 2026</div>
-                <div class="small seats-text mb-4">4 seats left</div>
-                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                <div class="training-actions">
                   <a href="training-details.html" data-course="jss" class="details-link">Details</a>
-                  <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
+                  <a href="apply.html" class="btn btn-primary">Apply now</a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <!-- Card 8: Graphic Design Essentials -->
           <div class="col" data-type="workshop" data-price="free" data-category="creative" data-page="2" style="display: none;">
-            <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-container">
-                <img src="../assets/img/graphic.jpg" alt="Graphic Design Essentials">
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <div class="mb-2">
-                  <span class="category-pill">Creative</span>
+            <article class="training-card">
+              <img src="../assets/img/graphic.jpg" alt="Graphic Design Essentials" class="training-image">
+              <div class="training-card-body">
+                <span class="tag">Creative</span>
+                <h3>Graphic Design Essentials</h3>
+                <p class="training-description">Learn layout design, typography rules, and vector asset creation.</p>
+                <div class="training-info">
+                  <p><span>◷</span><time datetime="2026-12-05">5 December 2026</time></p>
+                  <p class="seats-left">7 seats left</p>
                 </div>
-                <h3 class="h6 fw-bold mb-2">Graphic Design Essentials</h3>
-                <p class="small text-muted mb-3">Learn layout design, typography rules, and vector asset creation.</p>
-                <div class="small text-muted mb-1">🕒 5 December 2026</div>
-                <div class="small seats-text mb-4">7 seats left</div>
-                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                <div class="training-actions">
                   <a href="training-details.html" data-course="graphic" class="details-link">Details</a>
-                  <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
+                  <a href="apply.html" class="btn btn-primary">Apply now</a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <!-- Card 9: Project Management -->
           <div class="col" data-type="course" data-price="paid" data-category="professional" data-page="2" style="display: none;">
-            <div class="card h-100 shadow-sm custom-training-card">
-              <div class="ratio ratio-16x9 card-img-container">
-                <img src="../assets/img/project-management.jpg" alt="Project Management">
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <div class="mb-2">
-                  <span class="category-pill">Professional</span>
+            <article class="training-card">
+              <img src="../assets/img/project-management.jpg" alt="Project Management" class="training-image">
+              <div class="training-card-body">
+                <span class="tag">Professional</span>
+                <h3>Project Management</h3>
+                <p class="training-description">Learn how to plan, schedule and deliver projects on time and within budget.</p>
+                <div class="training-info">
+                  <p><span>◷</span><time datetime="2026-11-26">26 November 2026</time></p>
+                  <p class="seats-left">9 seats left</p>
                 </div>
-                <h3 class="h6 fw-bold mb-2">Project Management</h3>
-                <p class="small text-muted mb-3">Learn how to plan, schedule and deliver projects on time and within budget.</p>
-                <div class="small text-muted mb-1">🕒 26 November 2026</div>
-                <div class="small seats-text mb-4">9 seats left</div>
-                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+                <div class="training-actions">
                   <a href="training-details.html" data-course="project-management" class="details-link">Details</a>
-                  <a href="apply.html" class="btn btn-custom-purple px-3 py-1">Apply now</a>
+                  <a href="apply.html" class="btn btn-primary">Apply now</a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
         </div>
@@ -352,14 +325,15 @@
   </main>
 
   <!-- Footer -->
-  <footer class="app-footer py-4 mt-5">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-      <div class="d-flex align-items-center gap-3">
+  <!-- Footer (same layout as the homepage) -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand">
         <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
-        <div class="footer-sub">Training Events Management System</div>
-      </div>
-      <p class="footer-tagline mb-0">A single place to discover, manage and complete training.</p>
+      </a>
+      <p>LEARN · CONNECT · GROW</p>
     </div>
+    <p>&copy; 2026 Training Events. All rights reserved.</p>
   </footer>
 
   <script src="../assets/js/trainings.js"></script>

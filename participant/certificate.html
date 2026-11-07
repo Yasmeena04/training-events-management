@@ -8,17 +8,191 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-role="participant" data-page="certificate">
-<div id="site-header"></div>
+  <!-- Header (same layout as the homepage) -->
+  <header class="site-header">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="Levent — Learn, Connect, Grow" class="brand-logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../participant/trainings.html">Discover</a>
+      <a href="../participant/my-trainings.html">My trainings</a>
+      <a href="../participant/certificate.html" class="active" aria-current="page">Certificates</a>
+    </nav>
+    <div class="header-tools">
+      <label for="role-switch" class="visually-hidden">Switch role</label>
+      <select id="role-switch" class="form-select role-select" onchange="location.href = this.value">
+        <option value="../participant/trainings.html" selected>Participant</option>
+        <option value="../trainer/my-trainings.html">Trainer</option>
+        <option value="../manager/requests.html">Manager</option>
+        <option value="../admin/dashboard.html">Admin</option>
+      </select>
+      <a href="../alerts.html" class="bell" aria-label="Alerts">&#128276;<i></i></a>
+      <a href="../profile.html" class="user-chip"><span class="avatar" id="user-initials">G2</span><span id="user-name">Group 2</span></a>
+    </div>
+  </header>
 <main class="container">
-<div class="no-print cols" style="align-items:center;margin-bottom:1rem"><div><p class="eyebrow">My achievements</p><h1>Certificate of completion</h1><p class="muted">Print it or choose “Save as PDF” in the print window.</p></div>
-<div style="flex:0 0 auto"><button class="btn btn-primary" id="print-btn">Print certificate</button></div></div>
-<div class="cert-wrap" id="cert-area"><article class="certificate">
-<p class="muted">Training Events Management System</p><h1>Certificate of Completion</h1><p>This certifies that</p>
-<div class="name" id="c-name">Participant Name</div><p>has successfully completed</p><h2 id="c-title" style="font-size:1.5rem">Subject</h2><p class="muted" id="c-detail">Trainer Name</p><p id="c-att"></p>
-<div class="sign"><div>Certificate no.<br><strong id="c-no">CERT-0000</strong></div><div>Issue date<br><strong id="c-date">DD/MM/YYYY</strong></div><div><strong id="c-trainer">Trainer Name</strong><br>Trainer</div></div></article></div>
-<div id="site-footer"></div>
-<script src="../assets/js/data.js"></script>
-<script src="../assets/js/layout.js"></script>
-<script src="../assets/js/attendance.js"></script>
+
+  <!-- Owner: Yasmeena | Module 7 (Attendance & Certificates) -->
+
+  <div class="page-head no-print">
+    <p class="eyebrow">My achievements</p>
+    <h1>My certificates</h1>
+    <p class="muted">Every training you joined is listed here. Each one you complete with 80% attendance or more
+      has its own certificate. To print one or save it as PDF, open it and press <strong>Ctrl + P</strong>.</p>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="grid-4 no-print">
+    <div class="stat"><span>Trainings joined</span><strong>5</strong></div>
+    <div class="stat"><span>Certificates earned</span><strong>3</strong></div>
+    <div class="stat"><span>In progress</span><strong>1</strong></div>
+    <div class="stat"><span>Not completed</span><strong>1</strong></div>
+  </div>
+
+  <!-- ALL JOINED TRAININGS -->
+  <section class="cert-list no-print" aria-label="My trainings and certificates">
+
+      <article class="cert-course">
+        <div>
+          <span class="tag">Workshop</span> <span class="tag ok">Certificate ready</span>
+          <h3>Excel for Beginners</h3>
+          <p class="muted small mb-0">Trainer: <strong>Data Guild</strong></p>
+        </div>
+        <dl class="kv">
+          <dt>Attendance</dt><dd>3 of 3 sessions (100%)</dd>
+          <dt>Issued</dt><dd>17/10/2026</dd>
+        </dl>
+        <a href="#cert-excel" class="btn btn-soft btn-sm">View certificate</a>
+      </article>
+
+      <article class="cert-course">
+        <div>
+          <span class="tag">Course</span> <span class="tag ok">Certificate ready</span>
+          <h3>Intro to Data Analysis</h3>
+          <p class="muted small mb-0">Trainer: <strong>Data Guild</strong></p>
+        </div>
+        <dl class="kv">
+          <dt>Attendance</dt><dd>10 of 10 sessions (100%)</dd>
+          <dt>Issued</dt><dd>28/10/2026</dd>
+        </dl>
+        <a href="#cert-data" class="btn btn-soft btn-sm">View certificate</a>
+      </article>
+
+      <article class="cert-course">
+        <div>
+          <span class="tag">Workshop</span> <span class="tag ok">Certificate ready</span>
+          <h3>UI/UX Design Basics</h3>
+          <p class="muted small mb-0">Trainer: <strong>Design Studio</strong></p>
+        </div>
+        <dl class="kv">
+          <dt>Attendance</dt><dd>4 of 5 sessions (80%)</dd>
+          <dt>Issued</dt><dd>02/11/2026</dd>
+        </dl>
+        <a href="#cert-uiux" class="btn btn-soft btn-sm">View certificate</a>
+      </article>
+
+      <article class="cert-course">
+        <div>
+          <span class="tag">Course</span> <span class="tag">In progress</span>
+          <h3>Advanced JavaScript</h3>
+          <p class="muted small mb-0">Trainer: <strong>Code Academy</strong></p>
+        </div>
+        <dl class="kv">
+          <dt>Attendance</dt><dd>2 of 6 sessions so far</dd>
+          <dt>Ends</dt><dd>20/11/2026</dd>
+        </dl>
+        <p class="muted small mb-0">The certificate appears here when the training ends.</p>
+      </article>
+
+      <article class="cert-course">
+        <div>
+          <span class="tag">Workshop</span> <span class="tag bad">No certificate</span>
+          <h3>Teamwork and Communication</h3>
+          <p class="muted small mb-0">Trainer: <strong>Leadership Center</strong></p>
+        </div>
+        <dl class="kv">
+          <dt>Attendance</dt><dd>1 of 2 sessions (50%)</dd>
+          <dt>Ended</dt><dd>12/10/2026</dd>
+        </dl>
+        <p class="muted small mb-0">Attendance was below the 80% needed for a certificate.</p>
+      </article>
+
+  </section>
+
+  <!-- CERTIFICATE: Excel for Beginners -->
+  <section class="cert-block" id="cert-excel">
+    <p class="eyebrow no-print">Excel for Beginners</p>
+    <div class="cert-wrap">
+      <article class="certificate">
+        <p class="muted">Levent · Training Events Management System</p>
+        <h1>Certificate of Completion</h1>
+        <p>This certifies that</p>
+        <div class="name">Participant Name</div>
+        <p>has successfully completed the workshop</p>
+        <h2 class="cert-course-title">Excel for Beginners</h2>
+        <p class="muted">12 hours · Attendance 100%</p>
+        <div class="sign">
+          <div>Certificate no.<br><strong>CERT-2026-0142</strong></div>
+          <div>Issue date<br><strong>17/10/2026</strong></div>
+          <div><strong>Data Guild</strong><br>Trainer</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CERTIFICATE: Intro to Data Analysis -->
+  <section class="cert-block" id="cert-data">
+    <p class="eyebrow no-print">Intro to Data Analysis</p>
+    <div class="cert-wrap">
+      <article class="certificate">
+        <p class="muted">Levent · Training Events Management System</p>
+        <h1>Certificate of Completion</h1>
+        <p>This certifies that</p>
+        <div class="name">Participant Name</div>
+        <p>has successfully completed the course</p>
+        <h2 class="cert-course-title">Intro to Data Analysis</h2>
+        <p class="muted">30 hours · Attendance 100%</p>
+        <div class="sign">
+          <div>Certificate no.<br><strong>CERT-2026-0187</strong></div>
+          <div>Issue date<br><strong>28/10/2026</strong></div>
+          <div><strong>Data Guild</strong><br>Trainer</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CERTIFICATE: UI/UX Design Basics -->
+  <section class="cert-block" id="cert-uiux">
+    <p class="eyebrow no-print">UI/UX Design Basics</p>
+    <div class="cert-wrap">
+      <article class="certificate">
+        <p class="muted">Levent · Training Events Management System</p>
+        <h1>Certificate of Completion</h1>
+        <p>This certifies that</p>
+        <div class="name">Participant Name</div>
+        <p>has successfully completed the workshop</p>
+        <h2 class="cert-course-title">UI/UX Design Basics</h2>
+        <p class="muted">16 hours · Attendance 80%</p>
+        <div class="sign">
+          <div>Certificate no.<br><strong>CERT-2026-0203</strong></div>
+          <div>Issue date<br><strong>02/11/2026</strong></div>
+          <div><strong>Design Studio</strong><br>Trainer</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+  <!-- Footer (same layout as the homepage) -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand">
+        <img src="../assets/img/logo.png" alt="Levent" class="brand-logo">
+      </a>
+      <p>LEARN · CONNECT · GROW</p>
+    </div>
+    <p>&copy; 2026 Training Events. All rights reserved.</p>
+  </footer>
 </body>
 </html>
