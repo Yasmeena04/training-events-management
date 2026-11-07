@@ -1,26 +1,334 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alerts | Training Events</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alerts | Levent</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
-<body>
-  <!-- Owner: Shaima | Module 6 -->
-  <div id="site-header"></div>
 
-  <main class="container py-4">
-    <h1>Alerts</h1>
-    <!-- TODO: page content -->
-  </main>
+<body class="alerts-page">
 
-  <div id="site-footer"></div>
+    <div class="alerts-layout">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/data.js"></script>
-  <script src="assets/js/layout.js"></script>
-  <script src="assets/js/notifications.js"></script>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <a href="index.html" class="sidebar-brand">
+                <img
+                    src="assets/img/logo.png"
+                    alt="Levent - Learn, Connect, Grow"
+                >
+            </a>
+
+            <nav class="sidebar-nav" aria-label="Main navigation">
+
+                <a href="index.html" class="sidebar-link">
+                    <span class="nav-icon">⌂</span>
+                    Home
+                </a>
+
+                <a href="profile.html" class="sidebar-link">
+                    <span class="nav-icon">◉</span>
+                    My Profile
+                </a>
+
+                <a href="alerts.html"
+                   class="sidebar-link active"
+                   aria-current="page">
+                    <span class="nav-icon">♧</span>
+                    Alerts
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="login.html" class="sidebar-link logout-link">
+                    <span class="nav-icon">↪</span>
+                    Log out
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="alerts-main">
+
+            <!-- TOP BAR -->
+            <header class="alerts-topbar">
+
+                <div>
+                    <p class="alerts-breadcrumb">
+                        Home / Alerts
+                    </p>
+
+                    <h1>Alerts</h1>
+
+                    <p class="alerts-subtitle">
+                        Stay updated with your activities and announcements.
+                    </p>
+                </div>
+
+                <div class="topbar-user">
+
+                    <span class="topbar-avatar">SA</span>
+
+                    <span>Shaima</span>
+
+                </div>
+
+            </header>
+
+
+            <!-- NOTIFICATION SUMMARY -->
+            <section class="alerts-summary">
+
+                <article class="summary-card">
+
+                    <span class="summary-icon">◉</span>
+
+                    <div>
+                        <p>Total Notifications</p>
+                        <h2>5</h2>
+                    </div>
+
+                </article>
+
+
+                <article class="summary-card unread-summary">
+
+                    <span class="summary-icon">●</span>
+
+                    <div>
+                        <p>Unread Notifications</p>
+                        <h2>3</h2>
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- ALERTS CONTENT -->
+            <section class="alerts-content">
+
+                <div class="alerts-heading">
+
+                    <div>
+                        <h2>All Notifications</h2>
+
+                        <p>
+                            Your recent updates and activities.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FILTER CONTROLS -->
+
+                <input
+                    type="radio"
+                    name="alert-filter"
+                    id="alerts-all"
+                    class="alert-filter-input"
+                    checked
+                >
+
+                <input
+                    type="radio"
+                    name="alert-filter"
+                    id="alerts-unread"
+                    class="alert-filter-input"
+                >
+
+                <input
+                    type="radio"
+                    name="alert-filter"
+                    id="alerts-read"
+                    class="alert-filter-input"
+                >
+
+
+                <!-- FILTER NAVIGATION -->
+                <div class="alerts-toolbar">
+
+                    <div class="alert-filters">
+
+                        <label for="alerts-all"
+                               class="alert-filter">
+                            All
+                            <span>5</span>
+                        </label>
+
+                        <label for="alerts-unread"
+                               class="alert-filter">
+                            Unread
+                            <span>3</span>
+                        </label>
+
+                        <label for="alerts-read"
+                               class="alert-filter">
+                            Read
+                            <span>2</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NOTIFICATION LIST -->
+                <div class="alerts-list">
+
+
+                    <!-- ALERT 1: UNREAD -->
+                    <article class="alert-card"
+                             data-status="unread">
+
+                        <div class="alert-icon application-icon">
+                            ✓
+                        </div>
+
+                        <div class="alert-details">
+
+                            <div class="alert-title-row">
+
+                                <h3>Application Approved</h3>
+
+                                <span class="unread-badge">
+                                    New
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Your application for
+                                <strong>Introduction to Python</strong>
+                                has been approved.
+                            </p>
+
+                            <div class="alert-meta">
+
+                                <span>Application</span>
+                                <span>Today · 10:30 AM</span>
+
+                            </div>
+
+                        </div>
+
+                        <a href="participant/training-details.html"
+                           class="alert-action">
+                            View Details →
+                        </a>
+
+                    </article>
+
+
+                    <!-- ALERT 2: UNREAD -->
+                    <article class="alert-card"
+                             data-status="unread">
+
+                        <div class="alert-icon schedule-icon">
+                            ◷
+                        </div>
+
+                        <div class="alert-details">
+
+                            <div class="alert-title-row">
+
+                                <h3>Training Schedule Updated</h3>
+
+                                <span class="unread-badge">
+                                    New
+                                </span>
+
+                            </div>
+
+                            <p>
+                                The schedule for your upcoming
+                                training has been updated.
+                            </p>
+
+                            <div class="alert-meta">
+
+                                <span>Schedule</span>
+                                <span>Today · 9:15 AM</span>
+
+                            </div>
+
+                        </div>
+
+                        <a href="participant/my-trainings.html"
+                           class="alert-action">
+                            View Details →
+                        </a>
+
+                    </article>
+
+
+                    <!-- ALERT 3: UNREAD -->
+                    <article class="alert-card"
+                             data-status="unread">
+
+                        <div class="alert-icon announcement-icon">
+                            !
+                        </div>
+
+                        <div class="alert-details">
+
+                            <div class="alert-title-row">
+
+                                <h3>New Announcement</h3>
+
+                                <span class="unread-badge">
+                                    New
+                                </span>
+
+                            </div>
+
+                            <p>
+                                A new announcement has been published.
+                                Check it out for the latest updates.
+                            </p>
+
+                            <div class="alert-meta">
+
+                                <span>Announcement</span>
+                                <span>Yesterday · 3:45 PM</span>
+
+                            </div>
+
+                        </div>
+
+                        <a href="manager/announcements.html"
+                           class="alert-action">
+                            View Details →
+                        </a>
+
+                    </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
 </body>
 </html>
