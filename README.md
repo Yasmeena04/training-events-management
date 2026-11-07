@@ -65,7 +65,6 @@ training-events-management/
 ├── admin/
 │   ├── dashboard.html         # Admin dashboard (Shaima)
 │   ├── users.html             # User management (Shaima)
-│   ├── roles.html             # Roles & permissions (Yasmeena)
 │   ├── categories.html        # Training categories (Shaima)
 │   └── rooms.html             # Rooms management (Shaima)
 │
